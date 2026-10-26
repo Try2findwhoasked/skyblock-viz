@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hypixel SkyBlock 中文圈子 · 精华话题分析</title>
+<style>
+:root{
+  --bg:#0d1117; --bg2:#161b22; --bg3:#1c2230; --line:#2a3341;
+  --fg:#e6edf3; --fg2:#9aa7b8; --fg3:#6b7a8f;
+  --accent:#4d9fff; --warn:#f0883e; --good:#3fb950; --bad:#f85149;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--fg);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",-apple-system,system-ui,sans-serif;
+  line-height:1.65; font-size:15px;
+  background-image:radial-gradient(900px 500px at 15% -10%,rgba(77,159,255,.10),transparent 65%),
+                   radial-gradient(800px 400px at 95% 0%,rgba(147,52,230,.09),transparent 60%);
+  background-attachment:fixed;
+}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px 90px}
+
+header{padding:64px 0 36px;text-align:center}
+.badge{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);border:1px solid rgba(77,159,255,.34);border-radius:999px;
+  padding:5px 15px;margin-bottom:20px;background:rgba(77,159,255,.08)}
+h1{font-size:clamp(26px,4.2vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.25}
+h1 .grad{background:linear-gradient(100deg,#4d9fff 10%,#9334e6 55%,#ec407a 95%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--fg2);margin-top:14px;font-size:14.5px}
+.sub b{color:var(--fg);font-weight:600}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px;margin:40px 0 8px}
+.kpi{background:linear-gradient(180deg,var(--bg2),var(--bg));border:1px solid var(--line);
+  border-radius:var(--radius);padding:20px 18px;position:relative;overflow:hidden}
+.kpi::after{content:'';position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,var(--accent),transparent)}
+.kpi .v{font-size:29px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .v small{font-size:14px;font-weight:500;color:var(--fg2);margin-left:3px}
+.kpi .l{color:var(--fg3);font-size:12.5px;margin-top:6px;letter-spacing:.04em}
+
+section{margin-top:62px}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;flex-wrap:wrap}
+.sec-num{font-size:12px;color:var(--fg3);font-variant-numeric:tabular-nums;
+  border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+h2{font-size:21px;font-weight:650;letter-spacing:-.01em}
+.sec-desc{color:var(--fg2);font-size:13.5px;margin:6px 0 22px;max-width:82ch}
+
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid-3-2{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+@media(max-width:900px){.grid2,.grid-3-2{grid-template-columns:1fr}}
+
+.tbar{display:grid;grid-template-columns:38px 1fr;gap:6px 14px;align-items:center}
+.trow{display:contents;cursor:pointer}
+.trow .rank{color:var(--fg3);font-size:12px;font-variant-numeric:tabular-nums;text-align:right}
+.trow .meter{position:relative;height:34px;border-radius:8px;background:var(--bg3);
+  overflow:hidden;transition:transform .16s}
+.trow:hover .meter{transform:translateX(3px)}
+.trow.on .meter{outline:2px solid rgba(255,255,255,.35)}
+.trow .fill{position:absolute;inset:0 auto 0 0;border-radius:8px;opacity:.28;
+  transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.trow .txt{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;
+  padding:0 13px;font-size:13.5px;z-index:2}
+.trow .txt .nm{font-weight:600}
+.trow .txt .nm em{font-style:normal;color:var(--fg3);font-weight:400;font-size:11.5px;margin-left:7px}
+.trow .txt .n{font-variant-numeric:tabular-nums;color:var(--fg2);font-size:12.5px}
+
+.detail{position:sticky;top:20px;align-self:start}
+.detail h3{font-size:16px;display:flex;align-items:center;gap:9px}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.detail .dd{color:var(--fg2);font-size:13px;margin:9px 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{font-size:12.5px;padding:5px 11px;border-radius:999px;background:var(--bg3);
+  border:1px solid var(--line);color:var(--fg);font-variant-numeric:tabular-nums}
+.chip b{color:var(--accent);font-weight:600;margin-left:4px}
+.empty{color:var(--fg3);font-size:13px;padding:20px 0;text-align:center}
+
+.chart{width:100%;overflow:visible;display:block}
+.chart text{fill:var(--fg2);font-size:11px;font-family:inherit}
+.chart .axis{stroke:var(--line);stroke-width:1}
+.chart .grid-l{stroke:var(--line);stroke-width:1;stroke-dasharray:2 4;opacity:.55}
+.chart .bar{transition:opacity .15s}
+.chart .bar:hover{opacity:.78}
+.legend{display:flex;flex-wrap:wrap;gap:7px 16px;margin-top:14px;font-size:12.5px;color:var(--fg2)}
+.legend i{width:9px;height:9px;border-radius:3px;display:inline-block;margin-right:6px}
+
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--fg3);font-weight:500;font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+  position:sticky;top:0;background:var(--bg2)}
+tbody tr:hover{background:rgba(77,159,255,.05)}
+td.num{text-align:right;font-variant-numeric:tabular-nums;color:var(--fg2)}
+.lv{font-size:11px;padding:2px 8px;border-radius:5px;font-weight:600;letter-spacing:.03em}
+.lv.CORE{background:rgba(63,185,80,.16);color:#56d364}
+.lv.MAJOR{background:rgba(77,159,255,.16);color:#79c0ff}
+.lv.RELATED{background:rgba(240,136,62,.16);color:#ffa657}
+.scroll{max-height:430px;overflow:auto}
+.scroll::-webkit-scrollbar{width:9px;height:9px}
+.scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+
+.insight{display:grid;gap:14px;align-content:start}
+.ins{border-left:3px solid var(--accent);padding:13px 17px;background:var(--bg3);border-radius:0 10px 10px 0}
+.ins.warn{border-color:var(--warn)} .ins.bad{border-color:var(--bad)} .ins.good{border-color:var(--good)}
+.ins b{display:block;font-size:13.5px;margin-bottom:5px}
+.ins span{color:var(--fg2);font-size:13px}
+
+footer{margin-top:70px;padding-top:26px;border-top:1px solid var(--line);
+  color:var(--fg3);font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+svg text{user-select:none}
+
+/* ===== 原始语料查看 ===== */
+.tchips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tchip{font-size:12.5px;padding:6px 13px;border-radius:999px;background:var(--bg3);
+  border:1px solid var(--line);color:var(--fg2);cursor:pointer;transition:.15s;
+  display:inline-flex;align-items:center;gap:7px;user-select:none}
+.tchip:hover{border-color:rgba(77,159,255,.55);color:var(--fg)}
+.tchip.on{background:rgba(77,159,255,.16);border-color:rgba(77,159,255,.65);color:var(--fg);font-weight:600}
+.tchip i{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block}
+.tchip em{font-style:normal;color:var(--fg3);font-size:11.5px;font-variant-numeric:tabular-nums}
+
+.msgs{display:grid;gap:11px;max-height:620px;overflow:auto;padding-right:4px}
+.msgs::-webkit-scrollbar{width:9px}
+.msgs::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+.msg{background:var(--bg3);border:1px solid var(--line);border-radius:11px;padding:12px 14px}
+.msg .mh{display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  font-size:11.5px;color:var(--fg3);margin-bottom:7px}
+.msg .mh .nk{color:var(--fg2);font-weight:600;font-size:12.5px}
+.msg .mh .gn{color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(77,159,255,.4)}
+.msg .mh .gn:hover{color:#79c0ff}
+.msg .mh .sp{flex:1}
+.msg .mt{font-size:13px;color:var(--fg);white-space:pre-wrap;word-break:break-word;line-height:1.62}
+.msg .mt .url{color:var(--fg3);font-size:12px;word-break:break-all}
+.thumbs{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.thumbs img,.thumbs .ph{width:104px;height:104px;object-fit:cover;border-radius:8px;
+  border:1px solid var(--line);background:var(--bg2);transition:.15s;cursor:zoom-in;display:block}
+.thumbs img:hover{border-color:rgba(77,159,255,.7);transform:scale(1.03)}
+.thumbs .ph{display:flex;align-items:center;justify-content:center;color:var(--fg3);
+  font-size:11px;text-align:center;padding:6px;cursor:default}
+.tag{font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.06);color:var(--fg2)}
+.more{display:block;width:100%;margin-top:12px;padding:9px;font-size:13px;cursor:pointer;
+  background:var(--bg3);border:1px solid var(--line);border-radius:9px;color:var(--fg2);
+  font-family:inherit;transition:.15s}
+.more:hover{border-color:rgba(77,159,255,.55);color:var(--fg)}
+#groupTable tbody tr{cursor:pointer}
+#groupTable tbody tr.sel{background:rgba(77,159,255,.12)!important;
+  box-shadow:inset 3px 0 0 var(--accent)}
+.gside{position:sticky;top:20px;align-self:start}
+.gside h3{font-size:15.5px;margin-bottom:4px}
+.gside .gd{color:var(--fg3);font-size:12.5px;margin-bottom:14px}
+#lightbox{position:fixed;inset:0;background:rgba(3,6,12,.92);display:none;
+  align-items:center;justify-content:center;z-index:99;cursor:zoom-out;padding:32px}
+#lightbox.on{display:flex}
+#lightbox img{max-width:94vw;max-height:92vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.7)}
+.progress{display:inline-flex;align-items:center;gap:9px}
+.progress .bar{width:110px;height:5px;border-radius:3px;background:var(--bg3);overflow:hidden}
+.progress .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#9334e6);
+  border-radius:3px;transition:width .4s}
+</style>
+</head>
+<body>
+<div style="padding:12px;text-align:center;color:#8b949e">分析口径：消息正文＋图片 OCR 词典匹配；OCR 可能误识别，未使用通用图片模型标签。</div>
+<div class="wrap">
+  <header>
+    <div class="badge">Hypixel SkyBlock · QQ 群精华语料</div>
+    <h1>中文 SkyBlock 圈子<br><span class="grad">精华消息话题分析</span></h1>
+    <div class="sub" id="subline">正在加载…</div>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>话题结构</h2></div>
+    <div class="sec-desc">按 12 类话题词典对每条含文本的精华消息做多标签命中统计。点击任一主题查看其高频实体。</div>
+    <div class="grid-3-2">
+      <div class="card"><div class="tbar" id="topicBars"></div></div>
+      <div class="card detail" id="topicDetail"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>内容形态</h2></div>
+    <div class="sec-desc">精华区里有多少是纯图片？这决定了这个圈子的知识以什么形式沉淀。</div>
+    <div class="grid2">
+      <div class="card"><div id="donut"></div></div>
+      <div class="card insight" id="formInsight"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>时间趋势</h2></div>
+    <div class="sec-desc">按月统计精华产出总量，并叠加各主题的月度走势。</div>
+    <div class="card"><div id="monthlyChart"></div><div class="legend" id="monthLegend"></div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>话题共现</h2></div>
+    <div class="sec-desc">P(列 | 行)：提到行主题的消息中，同时提到列主题的比例。颜色越亮表示两话题越常被一起讨论。</div>
+    <div class="grid-3-2">
+      <div class="card"><div id="cooccur"></div></div>
+      <div class="card insight" id="coInsight"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>圈层差异</h2></div>
+    <div class="sec-desc">按群与 SkyBlock 圈子的"纯度"分层，看不同圈层的话题构成差异。</div>
+    <div class="card"><div id="levelChart"></div><div class="legend" id="levelLegend"></div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>领域词表</h2></div>
+    <div class="sec-desc">不使用无监督分词，改用人工精编的 SkyBlock 领域词表（123 项 / 11 类），避免"游戏""玩家""自己的"这类通用虚词占据榜单。横条长度=出现在多少条精华中（同一条内重复只计 1 次）；表中「主语境」表示该词最常出现在哪类话题里。</div>
+    <div class="grid2">
+      <div class="card"><div id="terms"></div></div>
+      <div class="card"><div class="scroll" style="max-height:620px"><table id="termTable"></table></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">07</span><h2>群层分布</h2></div>
+    <div class="sec-desc">精华产出与群规模、圈层纯度并不完全正相关。散点横轴为群内精华文本字数（对数），纵轴为精华条数。</div>
+    <div class="card"><div id="scatter"></div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">08</span><h2>群明细</h2></div>
+    <div class="sec-desc">按精华条数排序，可滚动查看全部群。点击任意一行，右侧展示该群的真实精华消息样例。</div>
+    <div class="grid-3-2">
+      <div class="card"><div class="scroll"><table id="groupTable"></table></div></div>
+      <div class="card gside" id="groupSamples"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">09</span><h2>原始语料</h2></div>
+    <div class="sec-desc">直接查看归入各话题的原始精华消息（按群轮转取样，避免单群刷屏）。图片优先读取本地缓存，未缓存时回退到原始 CDN 地址。</div>
+    <div class="card">
+      <div class="tchips" id="topicChips"></div>
+      <div class="msgs" id="topicSamples"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>数据链路：SnowLuma 抓取 → MATLAB R2024a 分析 → 静态可视化</div>
+    <div id="genAt"></div>
+  </footer>
+  <div style="margin-top:14px;display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px">
+    <a href="report.md" style="color:var(--accent);text-decoration:none">MATLAB 分析报告 (report.md)</a>
+    <a href="msgs.tsv" style="color:var(--accent);text-decoration:none">消息明细表 (msgs.tsv)</a>
+    <a href="groups.tsv" style="color:var(--accent);text-decoration:none">群汇总表 (groups.tsv)</a>
+    <a href="viz-data.json" style="color:var(--accent);text-decoration:none">页面数据源 (viz-data.json)</a>
+    <a href="../essence.json" style="color:var(--accent);text-decoration:none">精华原始数据 (essence.json)</a>
+    <a href="../images/manifest.json" style="color:var(--accent);text-decoration:none">图片映射 (manifest.json)</a>
+  </div>
+</div>
+<div id="lightbox"><img alt=""></div>
+<script>
+/*__DATA__*/
+/*__APP__*/
+</script>
+</body>
+</html>

@@ -24,3 +24,7 @@ CI 检查内嵌数据与下载数据一致、全部本地图片和下载链接�
 本地检查：`python scripts/check_site.py`（需要 Python 3.10+ 和 Node.js）。站点运行本身不需要这两个工具。
 
 本地预览：在本目录运行 `python -m http.server 8080`，访问 `http://localhost:8080/`。
+
+## OCR 词匹配更新
+
+主题、领域词频与样例分类已统一使用正文＋图片 OCR。样例可展开 OCR 文字；msgs.tsv 追加 ocr、analysisText。未使用 WD14 通用图片标签。重建脚本及运行说明见 analysis/README.md。当前统计见 report.md；历史 MATLAB 图表未重新计算。

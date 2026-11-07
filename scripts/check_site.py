@@ -1,6 +1,7 @@
 """Validate the complete static dependency set; optionally stage a Pages artifact."""
 
 import argparse
+import gzip
 import json
 import re
 import shutil
@@ -15,7 +16,8 @@ PUBLISH = ['index.html', 'images', 'report.md', 'msgs.tsv', 'groups.tsv',
            'full-chat.html', 'full-chat.js', 'full-chat-data.json',
            'essence-analysis.html', 'observatory.css', 'observatory.js',
            'analysis/full-chat-lexicon.json', 'word-cloud.js',
-           'corpus.html', 'corpus.js', 'corpus.css', 'corpus-details.json']
+           'corpus.html', 'corpus.js', 'corpus.css', 'corpus-details.json',
+           'essence-data.json.gz']
 
 
 class Dependencies(HTMLParser):
@@ -50,9 +52,12 @@ def main():
     document = Dependencies()
     document.feed(html)
     embedded = re.search(r'^window\.__SB_DATA = (.+)$', html, re.M)
-    if not embedded:
-        raise ValueError('Embedded page data is missing')
-    data = json.loads(embedded[1].rstrip('\r;'))
+    if embedded:
+        data = json.loads(embedded[1].rstrip('\r;'))
+    elif 'PACKED_ESSENCE_BOOTSTRAP' in html:
+        data = json.loads(gzip.decompress((ROOT / 'essence-data.json.gz').read_bytes()))
+    else:
+        raise ValueError('Legacy page data loader is missing')
     if data != json.loads((ROOT / 'viz-data.json').read_text(encoding='utf-8')):
         raise ValueError('Downloadable visualization data differs from page data')
     if not data.get('groups') or not data.get('topics'):

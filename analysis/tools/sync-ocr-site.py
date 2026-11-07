@@ -60,6 +60,8 @@ def main():
     for t in data['topics']: report += f"|{t['name']}|{t['mention']}|{t['primary']}|\n"
     (SOURCE/'output/matlab/report-ocr.md').write_text(report, encoding='utf-8')
     (SITE/'report.md').write_text(report, encoding='utf-8')
+    import subprocess, sys
+    subprocess.run([sys.executable, str(SITE/'analysis/pack-essence.py')], check=True)
     print(f'Reused {reused} image references; added {added}; OCR: {a}')
 if __name__ == '__main__': main()
 

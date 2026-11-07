@@ -1,0 +1,5737 @@
+{
+  "version": "2026-11-07.2",
+  "terms": [
+    {
+      "name": "SkyBlock",
+      "category": "core",
+      "aliases": [
+        "sky block",
+        "skyblock",
+        "skyblok",
+        "天空方块",
+        "skb",
+        "天块",
+        "空岛"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sky block(?![a-z0-9_]))|(?:(?<![a-z0-9_])skyblock(?![a-z0-9_]))|(?:(?<![a-z0-9_])skyblok(?![a-z0-9_]))|(?:天空方块)|(?:(?<![a-z0-9_])skb(?![a-z0-9_]))|(?:天块)|(?:空岛)"
+    },
+    {
+      "name": "Hypixel",
+      "category": "core",
+      "aliases": [
+        "hypixel",
+        "hyp",
+        "海像素"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hypixel(?![a-z0-9_]))|(?:(?<![a-z0-9_])hyp(?![a-z0-9_]))|(?:海像素)"
+    },
+    {
+      "name": "Minecraft",
+      "category": "core",
+      "aliases": [
+        "minecraft",
+        "我的世界",
+        "mc"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])minecraft(?![a-z0-9_]))|(?:我的世界)|(?:(?<![a-z0-9_])mc(?![a-z0-9_]))"
+    },
+    {
+      "name": "Co-op",
+      "category": "core",
+      "aliases": [
+        "co-op",
+        "coop",
+        "合作档"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])co-op(?![a-z0-9_]))|(?:(?<![a-z0-9_])coop(?![a-z0-9_]))|(?:合作档)"
+    },
+    {
+      "name": "Ironman",
+      "category": "core",
+      "aliases": [
+        "ironman",
+        "铁人模式",
+        "铁人档"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ironman(?![a-z0-9_]))|(?:铁人模式)|(?:铁人档)"
+    },
+    {
+      "name": "Stranded",
+      "category": "core",
+      "aliases": [
+        "stranded",
+        "滞留模式"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])stranded(?![a-z0-9_]))|(?:滞留模式)"
+    },
+    {
+      "name": "Bingo 档",
+      "category": "core",
+      "aliases": [
+        "bingo profile",
+        "宾果档"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bingo profile(?![a-z0-9_]))|(?:宾果档)"
+    },
+    {
+      "name": "档案",
+      "category": "core",
+      "aliases": [
+        "profile",
+        "存档",
+        "档案"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])profile(?![a-z0-9_]))|(?:存档)|(?:档案)"
+    },
+    {
+      "name": "Hub",
+      "category": "core",
+      "aliases": [
+        "hub",
+        "主城",
+        "大厅"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hub(?![a-z0-9_]))|(?:主城)|(?:大厅)"
+    },
+    {
+      "name": "私人岛屿",
+      "category": "core",
+      "aliases": [
+        "private island",
+        "私人岛屿"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])private island(?![a-z0-9_]))|(?:私人岛屿)"
+    },
+    {
+      "name": "净资产",
+      "category": "core",
+      "aliases": [
+        "net worth",
+        "networth",
+        "净资产",
+        "nw"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])net worth(?![a-z0-9_]))|(?:(?<![a-z0-9_])networth(?![a-z0-9_]))|(?:净资产)|(?:(?<![a-z0-9_])nw(?![a-z0-9_]))"
+    },
+    {
+      "name": "API",
+      "category": "core",
+      "aliases": [
+        "api接口",
+        "api"
+      ],
+      "context": "",
+      "pattern": "(?:api接口)|(?:(?<![a-z0-9_])api(?![a-z0-9_]))"
+    },
+    {
+      "name": "SkyCrypt",
+      "category": "core",
+      "aliases": [
+        "sky shiiyu",
+        "skycrypt"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sky shiiyu(?![a-z0-9_]))|(?:(?<![a-z0-9_])skycrypt(?![a-z0-9_]))"
+    },
+    {
+      "name": "博物馆",
+      "category": "core",
+      "aliases": [
+        "museum",
+        "博物馆"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])museum(?![a-z0-9_]))|(?:博物馆)"
+    },
+    {
+      "name": "装备仓库",
+      "category": "core",
+      "aliases": [
+        "wardrobe",
+        "衣柜"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wardrobe(?![a-z0-9_]))|(?:衣柜)"
+    },
+    {
+      "name": "背包与仓库",
+      "category": "core",
+      "aliases": [
+        "ender chest",
+        "backpack",
+        "storage",
+        "末影箱",
+        "背包"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ender chest(?![a-z0-9_]))|(?:(?<![a-z0-9_])backpack(?![a-z0-9_]))|(?:(?<![a-z0-9_])storage(?![a-z0-9_]))|(?:末影箱)|(?:背包)"
+    },
+    {
+      "name": "Sack",
+      "category": "core",
+      "aliases": [
+        "sack",
+        "物品袋"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sack(?![a-z0-9_]))|(?:物品袋)"
+    },
+    {
+      "name": "Hyperion",
+      "category": "weapon",
+      "aliases": [
+        "hyperion",
+        "海伯利安",
+        "亥伯利安",
+        "亥伯龙",
+        "海伯",
+        "海波"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hyperion(?![a-z0-9_]))|(?:海伯利安)|(?:亥伯利安)|(?:亥伯龙)|(?:海伯)|(?:海波)"
+    },
+    {
+      "name": "Scylla",
+      "category": "weapon",
+      "aliases": [
+        "scylla",
+        "斯库拉"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])scylla(?![a-z0-9_]))|(?:斯库拉)"
+    },
+    {
+      "name": "Astraea",
+      "category": "weapon",
+      "aliases": [
+        "astraea",
+        "阿斯特莉亚"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])astraea(?![a-z0-9_]))|(?:阿斯特莉亚)"
+    },
+    {
+      "name": "Valkyrie",
+      "category": "weapon",
+      "aliases": [
+        "valkyrie",
+        "瓦尔基里"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])valkyrie(?![a-z0-9_]))|(?:瓦尔基里)"
+    },
+    {
+      "name": "Wither Impact",
+      "category": "weapon",
+      "aliases": [
+        "wither impact",
+        "凋零冲击"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wither impact(?![a-z0-9_]))|(?:凋零冲击)"
+    },
+    {
+      "name": "Terminator",
+      "category": "weapon",
+      "aliases": [
+        "terminator",
+        "term",
+        "终结者",
+        "终结弓"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])terminator(?![a-z0-9_]))|(?:(?<![a-z0-9_])term(?![a-z0-9_]))|(?:终结者)|(?:终结弓)"
+    },
+    {
+      "name": "Juju",
+      "category": "weapon",
+      "aliases": [
+        "juju shortbow",
+        "juju bow",
+        "juju"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])juju shortbow(?![a-z0-9_]))|(?:(?<![a-z0-9_])juju bow(?![a-z0-9_]))|(?:(?<![a-z0-9_])juju(?![a-z0-9_]))"
+    },
+    {
+      "name": "Midas 武器",
+      "category": "weapon",
+      "aliases": [
+        "midas",
+        "迈达斯",
+        "米达斯",
+        "金铲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])midas(?![a-z0-9_]))|(?:迈达斯)|(?:米达斯)|(?:金铲)"
+    },
+    {
+      "name": "Aspect of the End",
+      "category": "weapon",
+      "aliases": [
+        "aspect of the end",
+        "aote"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])aspect of the end(?![a-z0-9_]))|(?:(?<![a-z0-9_])aote(?![a-z0-9_]))"
+    },
+    {
+      "name": "Aspect of the Void",
+      "category": "weapon",
+      "aliases": [
+        "aspect of the void",
+        "aotv"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])aspect of the void(?![a-z0-9_]))|(?:(?<![a-z0-9_])aotv(?![a-z0-9_]))"
+    },
+    {
+      "name": "Aspect of the Dragons",
+      "category": "weapon",
+      "aliases": [
+        "aspect of the dragons",
+        "aotd"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])aspect of the dragons(?![a-z0-9_]))|(?:(?<![a-z0-9_])aotd(?![a-z0-9_]))"
+    },
+    {
+      "name": "Giant's Sword",
+      "category": "weapon",
+      "aliases": [
+        "giant's sword",
+        "giants sword",
+        "巨人剑"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])giant's sword(?![a-z0-9_]))|(?:(?<![a-z0-9_])giants sword(?![a-z0-9_]))|(?:巨人剑)"
+    },
+    {
+      "name": "Dark Claymore",
+      "category": "weapon",
+      "aliases": [
+        "dark claymore",
+        "黑暗阔剑",
+        "暗黑阔剑"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dark claymore(?![a-z0-9_]))|(?:黑暗阔剑)|(?:暗黑阔剑)"
+    },
+    {
+      "name": "Livid Dagger",
+      "category": "weapon",
+      "aliases": [
+        "livid dagger",
+        "livid",
+        "利维德"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])livid dagger(?![a-z0-9_]))|(?:(?<![a-z0-9_])livid(?![a-z0-9_]))|(?:利维德)"
+    },
+    {
+      "name": "Shadow Fury",
+      "category": "weapon",
+      "aliases": [
+        "shadow fury",
+        "暗影狂怒"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])shadow fury(?![a-z0-9_]))|(?:暗影狂怒)"
+    },
+    {
+      "name": "Flower of Truth",
+      "category": "weapon",
+      "aliases": [
+        "flower of truth",
+        "真理之花"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])flower of truth(?![a-z0-9_]))|(?:真理之花)"
+    },
+    {
+      "name": "Bouquet of Lies",
+      "category": "weapon",
+      "aliases": [
+        "bouquet of lies",
+        "谎言花束"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bouquet of lies(?![a-z0-9_]))|(?:谎言花束)"
+    },
+    {
+      "name": "Spirit Sceptre",
+      "category": "weapon",
+      "aliases": [
+        "spirit sceptre",
+        "spirit scepter",
+        "灵魂权杖"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])spirit sceptre(?![a-z0-9_]))|(?:(?<![a-z0-9_])spirit scepter(?![a-z0-9_]))|(?:灵魂权杖)"
+    },
+    {
+      "name": "Glacial Scythe",
+      "category": "weapon",
+      "aliases": [
+        "glacial scythe",
+        "冰川镰刀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])glacial scythe(?![a-z0-9_]))|(?:冰川镰刀)"
+    },
+    {
+      "name": "Frozen Scythe",
+      "category": "weapon",
+      "aliases": [
+        "frozen scythe",
+        "冰冻镰刀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])frozen scythe(?![a-z0-9_]))|(?:冰冻镰刀)"
+    },
+    {
+      "name": "Bonzo's Staff",
+      "category": "weapon",
+      "aliases": [
+        "bonzo's staff",
+        "bonzo staff"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bonzo's staff(?![a-z0-9_]))|(?:(?<![a-z0-9_])bonzo staff(?![a-z0-9_]))"
+    },
+    {
+      "name": "Yeti Sword",
+      "category": "weapon",
+      "aliases": [
+        "yeti sword",
+        "雪人剑"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])yeti sword(?![a-z0-9_]))|(?:雪人剑)"
+    },
+    {
+      "name": "Reaper Scythe",
+      "category": "weapon",
+      "aliases": [
+        "reaper scythe",
+        "死神镰刀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])reaper scythe(?![a-z0-9_]))|(?:死神镰刀)"
+    },
+    {
+      "name": "Atomsplit Katana",
+      "category": "weapon",
+      "aliases": [
+        "atomsplit",
+        "原子分裂",
+        "原子刀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])atomsplit(?![a-z0-9_]))|(?:原子分裂)|(?:原子刀)"
+    },
+    {
+      "name": "Vorpal Katana",
+      "category": "weapon",
+      "aliases": [
+        "vorpal katana"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])vorpal katana(?![a-z0-9_]))"
+    },
+    {
+      "name": "Voidwalker Katana",
+      "category": "weapon",
+      "aliases": [
+        "voidwalker katana"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])voidwalker katana(?![a-z0-9_]))"
+    },
+    {
+      "name": "Daedalus Axe",
+      "category": "weapon",
+      "aliases": [
+        "daedalus axe",
+        "代达罗斯",
+        "戴达罗斯"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])daedalus axe(?![a-z0-9_]))|(?:代达罗斯)|(?:戴达罗斯)"
+    },
+    {
+      "name": "Ragnarock Axe",
+      "category": "weapon",
+      "aliases": [
+        "ragnarock axe",
+        "诸神黄昏斧"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ragnarock axe(?![a-z0-9_]))|(?:诸神黄昏斧)"
+    },
+    {
+      "name": "Axe of the Shredded",
+      "category": "weapon",
+      "aliases": [
+        "axe of the shredded",
+        "aots"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])axe of the shredded(?![a-z0-9_]))|(?:(?<![a-z0-9_])aots(?![a-z0-9_]))"
+    },
+    {
+      "name": "Gyrokinetic Wand",
+      "category": "weapon",
+      "aliases": [
+        "gyrokinetic wand",
+        "陀螺杖"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])gyrokinetic wand(?![a-z0-9_]))|(?:陀螺杖)"
+    },
+    {
+      "name": "Ice Spray Wand",
+      "category": "weapon",
+      "aliases": [
+        "ice spray wand",
+        "冰喷"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ice spray wand(?![a-z0-9_]))|(?:冰喷)"
+    },
+    {
+      "name": "Bonemerang",
+      "category": "weapon",
+      "aliases": [
+        "bonemerang",
+        "骨头回旋镖"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bonemerang(?![a-z0-9_]))|(?:骨头回旋镖)"
+    },
+    {
+      "name": "Last Breath",
+      "category": "weapon",
+      "aliases": [
+        "last breath"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])last breath(?![a-z0-9_]))"
+    },
+    {
+      "name": "武器",
+      "category": "weapon",
+      "aliases": [
+        "weapon",
+        "武器",
+        "配装"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])weapon(?![a-z0-9_]))|(?:武器)|(?:配装)"
+    },
+    {
+      "name": "短弓",
+      "category": "weapon",
+      "aliases": [
+        "shortbow",
+        "短弓"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])shortbow(?![a-z0-9_]))|(?:短弓)"
+    },
+    {
+      "name": "Necron",
+      "category": "armor",
+      "aliases": [
+        "necron",
+        "尼克龙",
+        "死灵甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])necron(?![a-z0-9_]))|(?:尼克龙)|(?:死灵甲)"
+    },
+    {
+      "name": "Storm",
+      "category": "armor",
+      "aliases": [
+        "storm",
+        "风暴甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])storm(?![a-z0-9_]))|(?:风暴甲)"
+    },
+    {
+      "name": "Goldor",
+      "category": "armor",
+      "aliases": [
+        "goldor",
+        "戈尔多"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])goldor(?![a-z0-9_]))|(?:戈尔多)"
+    },
+    {
+      "name": "Maxor",
+      "category": "armor",
+      "aliases": [
+        "maxor",
+        "麦克索"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])maxor(?![a-z0-9_]))|(?:麦克索)"
+    },
+    {
+      "name": "Crimson",
+      "category": "armor",
+      "aliases": [
+        "crimson",
+        "绯红甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])crimson(?![a-z0-9_]))|(?:绯红甲)"
+    },
+    {
+      "name": "Aurora",
+      "category": "armor",
+      "aliases": [
+        "aurora",
+        "极光甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])aurora(?![a-z0-9_]))|(?:极光甲)"
+    },
+    {
+      "name": "Terror",
+      "category": "armor",
+      "aliases": [
+        "terror armor",
+        "terror",
+        "恐惧甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])terror armor(?![a-z0-9_]))|(?:(?<![a-z0-9_])terror(?![a-z0-9_]))|(?:恐惧甲)"
+    },
+    {
+      "name": "Fervor",
+      "category": "armor",
+      "aliases": [
+        "fervor",
+        "狂热甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fervor(?![a-z0-9_]))|(?:狂热甲)"
+    },
+    {
+      "name": "Hollow",
+      "category": "armor",
+      "aliases": [
+        "hollow armor",
+        "hollow",
+        "空洞甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hollow armor(?![a-z0-9_]))|(?:(?<![a-z0-9_])hollow(?![a-z0-9_]))|(?:空洞甲)"
+    },
+    {
+      "name": "Infernal 强化",
+      "category": "armor",
+      "aliases": [
+        "infernal crimson",
+        "infernal armor",
+        "地狱绯红"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])infernal crimson(?![a-z0-9_]))|(?:(?<![a-z0-9_])infernal armor(?![a-z0-9_]))|(?:地狱绯红)"
+    },
+    {
+      "name": "Frozen Blaze",
+      "category": "armor",
+      "aliases": [
+        "frozen blaze",
+        "冰霜烈焰",
+        "冰火甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])frozen blaze(?![a-z0-9_]))|(?:冰霜烈焰)|(?:冰火甲)"
+    },
+    {
+      "name": "Shadow Assassin",
+      "category": "armor",
+      "aliases": [
+        "shadow assassin",
+        "暗影刺客"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])shadow assassin(?![a-z0-9_]))|(?:暗影刺客)"
+    },
+    {
+      "name": "Final Destination",
+      "category": "armor",
+      "aliases": [
+        "final destination",
+        "终末甲",
+        "终点甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])final destination(?![a-z0-9_]))|(?:终末甲)|(?:终点甲)"
+    },
+    {
+      "name": "Sorrow",
+      "category": "armor",
+      "aliases": [
+        "sorrow",
+        "忧伤甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sorrow(?![a-z0-9_]))|(?:忧伤甲)"
+    },
+    {
+      "name": "Divan",
+      "category": "armor",
+      "aliases": [
+        "divan",
+        "迪万",
+        "迪瓦"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])divan(?![a-z0-9_]))|(?:迪万)|(?:迪瓦)"
+    },
+    {
+      "name": "Glacite",
+      "category": "armor",
+      "aliases": [
+        "glacite",
+        "冰川甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])glacite(?![a-z0-9_]))|(?:冰川甲)"
+    },
+    {
+      "name": "Fermento",
+      "category": "armor",
+      "aliases": [
+        "fermento",
+        "发酵甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fermento(?![a-z0-9_]))|(?:发酵甲)"
+    },
+    {
+      "name": "Squash",
+      "category": "armor",
+      "aliases": [
+        "squash armor",
+        "南瓜甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])squash armor(?![a-z0-9_]))|(?:南瓜甲)"
+    },
+    {
+      "name": "Cropie",
+      "category": "armor",
+      "aliases": [
+        "cropie armor"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])cropie armor(?![a-z0-9_]))"
+    },
+    {
+      "name": "Young Dragon",
+      "category": "armor",
+      "aliases": [
+        "young dragon",
+        "幼龙甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])young dragon(?![a-z0-9_]))|(?:幼龙甲)"
+    },
+    {
+      "name": "Superior Dragon",
+      "category": "armor",
+      "aliases": [
+        "superior dragon",
+        "超强龙甲",
+        "至尊龙甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])superior dragon(?![a-z0-9_]))|(?:超强龙甲)|(?:至尊龙甲)"
+    },
+    {
+      "name": "Wise Dragon",
+      "category": "armor",
+      "aliases": [
+        "wise dragon",
+        "智慧龙甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wise dragon(?![a-z0-9_]))|(?:智慧龙甲)"
+    },
+    {
+      "name": "Warden Helmet",
+      "category": "armor",
+      "aliases": [
+        "warden helmet",
+        "warden",
+        "守望头"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])warden helmet(?![a-z0-9_]))|(?:(?<![a-z0-9_])warden(?![a-z0-9_]))|(?:守望头)"
+    },
+    {
+      "name": "Reaper Mask",
+      "category": "armor",
+      "aliases": [
+        "reaper mask",
+        "死神面具"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])reaper mask(?![a-z0-9_]))|(?:死神面具)"
+    },
+    {
+      "name": "Golden Head",
+      "category": "armor",
+      "aliases": [
+        "golden head",
+        "金头"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])golden head(?![a-z0-9_]))|(?:金头)"
+    },
+    {
+      "name": "Diamond Head",
+      "category": "armor",
+      "aliases": [
+        "diamond head",
+        "钻头盔",
+        "钻石头"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])diamond head(?![a-z0-9_]))|(?:钻头盔)|(?:钻石头)"
+    },
+    {
+      "name": "Spirit Mask",
+      "category": "armor",
+      "aliases": [
+        "spirit mask",
+        "灵魂面具"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])spirit mask(?![a-z0-9_]))|(?:灵魂面具)"
+    },
+    {
+      "name": "Bonzo's Mask",
+      "category": "armor",
+      "aliases": [
+        "bonzo's mask",
+        "bonzo mask"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bonzo's mask(?![a-z0-9_]))|(?:(?<![a-z0-9_])bonzo mask(?![a-z0-9_]))"
+    },
+    {
+      "name": "Wither Goggles",
+      "category": "armor",
+      "aliases": [
+        "wither goggles",
+        "凋零护目镜"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wither goggles(?![a-z0-9_]))|(?:凋零护目镜)"
+    },
+    {
+      "name": "Equipment",
+      "category": "armor",
+      "aliases": [
+        "equipment",
+        "配件",
+        "项链",
+        "腰带",
+        "手套",
+        "披风"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])equipment(?![a-z0-9_]))|(?:配件)|(?:项链)|(?:腰带)|(?:手套)|(?:披风)"
+    },
+    {
+      "name": "Molten Equipment",
+      "category": "armor",
+      "aliases": [
+        "molten necklace",
+        "molten bracelet",
+        "molten cloak",
+        "molten belt"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])molten necklace(?![a-z0-9_]))|(?:(?<![a-z0-9_])molten bracelet(?![a-z0-9_]))|(?:(?<![a-z0-9_])molten cloak(?![a-z0-9_]))|(?:(?<![a-z0-9_])molten belt(?![a-z0-9_]))"
+    },
+    {
+      "name": "护甲",
+      "category": "armor",
+      "aliases": [
+        "armour",
+        "armor",
+        "护甲",
+        "盔甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])armour(?![a-z0-9_]))|(?:(?<![a-z0-9_])armor(?![a-z0-9_]))|(?:护甲)|(?:盔甲)"
+    },
+    {
+      "name": "Magical Power",
+      "category": "stats",
+      "aliases": [
+        "magical power",
+        "魔法力量",
+        "魔力值",
+        "mp"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])magical power(?![a-z0-9_]))|(?:魔法力量)|(?:魔力值)|(?:(?<![a-z0-9_])mp(?![a-z0-9_]))"
+    },
+    {
+      "name": "Magic Find",
+      "category": "stats",
+      "aliases": [
+        "magic find",
+        "魔法发现",
+        "mf",
+        "魔寻"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])magic find(?![a-z0-9_]))|(?:魔法发现)|(?:(?<![a-z0-9_])mf(?![a-z0-9_]))|(?:魔寻)"
+    },
+    {
+      "name": "Pet Luck",
+      "category": "stats",
+      "aliases": [
+        "pet luck",
+        "宠物幸运"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])pet luck(?![a-z0-9_]))|(?:宠物幸运)"
+    },
+    {
+      "name": "Attack Speed",
+      "category": "stats",
+      "aliases": [
+        "attack speed",
+        "攻速"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])attack speed(?![a-z0-9_]))|(?:攻速)"
+    },
+    {
+      "name": "Crit Chance",
+      "category": "stats",
+      "aliases": [
+        "crit chance",
+        "暴击率"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])crit chance(?![a-z0-9_]))|(?:暴击率)"
+    },
+    {
+      "name": "Crit Damage",
+      "category": "stats",
+      "aliases": [
+        "crit damage",
+        "暴击伤害",
+        "暴伤"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])crit damage(?![a-z0-9_]))|(?:暴击伤害)|(?:暴伤)"
+    },
+    {
+      "name": "Strength",
+      "category": "stats",
+      "aliases": [
+        "strength",
+        "力量属性"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])strength(?![a-z0-9_]))|(?:力量属性)"
+    },
+    {
+      "name": "Intelligence",
+      "category": "stats",
+      "aliases": [
+        "intelligence",
+        "智力属性"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])intelligence(?![a-z0-9_]))|(?:智力属性)"
+    },
+    {
+      "name": "Ferocity",
+      "category": "stats",
+      "aliases": [
+        "ferocity",
+        "残暴",
+        "凶猛"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ferocity(?![a-z0-9_]))|(?:残暴)|(?:凶猛)"
+    },
+    {
+      "name": "True Defense",
+      "category": "stats",
+      "aliases": [
+        "true defense",
+        "真实防御"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])true defense(?![a-z0-9_]))|(?:真实防御)"
+    },
+    {
+      "name": "EHP",
+      "category": "stats",
+      "aliases": [
+        "有效生命",
+        "ehp"
+      ],
+      "context": "",
+      "pattern": "(?:有效生命)|(?:(?<![a-z0-9_])ehp(?![a-z0-9_]))"
+    },
+    {
+      "name": "Vitality",
+      "category": "stats",
+      "aliases": [
+        "vitality",
+        "活力属性"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])vitality(?![a-z0-9_]))|(?:活力属性)"
+    },
+    {
+      "name": "Mana Pool",
+      "category": "stats",
+      "aliases": [
+        "mana pool",
+        "法力池"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mana pool(?![a-z0-9_]))|(?:法力池)"
+    },
+    {
+      "name": "Mana Regeneration",
+      "category": "stats",
+      "aliases": [
+        "mana regeneration",
+        "法力回复"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mana regeneration(?![a-z0-9_]))|(?:法力回复)"
+    },
+    {
+      "name": "Dominance",
+      "category": "stats",
+      "aliases": [
+        "dominance",
+        "支配"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dominance(?![a-z0-9_]))|(?:支配)"
+    },
+    {
+      "name": "Lifeline",
+      "category": "stats",
+      "aliases": [
+        "lifeline",
+        "生命线"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])lifeline(?![a-z0-9_]))|(?:生命线)"
+    },
+    {
+      "name": "Speed",
+      "category": "stats",
+      "aliases": [
+        "movement speed",
+        "移动速度",
+        "移速"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])movement speed(?![a-z0-9_]))|(?:移动速度)|(?:移速)"
+    },
+    {
+      "name": "Damage",
+      "category": "stats",
+      "aliases": [
+        "damage",
+        "dps",
+        "伤害",
+        "秒伤"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])damage(?![a-z0-9_]))|(?:(?<![a-z0-9_])dps(?![a-z0-9_]))|(?:伤害)|(?:秒伤)"
+    },
+    {
+      "name": "附魔",
+      "category": "stats",
+      "aliases": [
+        "enchanting",
+        "enchant",
+        "附魔"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])enchanting(?![a-z0-9_]))|(?:(?<![a-z0-9_])enchant(?![a-z0-9_]))|(?:附魔)"
+    },
+    {
+      "name": "重铸",
+      "category": "stats",
+      "aliases": [
+        "reforge",
+        "重铸"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])reforge(?![a-z0-9_]))|(?:重铸)"
+    },
+    {
+      "name": "重组",
+      "category": "stats",
+      "aliases": [
+        "recombobulator",
+        "recomb",
+        "重组器",
+        "重组"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])recombobulator(?![a-z0-9_]))|(?:(?<![a-z0-9_])recomb(?![a-z0-9_]))|(?:重组器)|(?:重组)"
+    },
+    {
+      "name": "Master Star",
+      "category": "stats",
+      "aliases": [
+        "master star",
+        "大师星"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])master star(?![a-z0-9_]))|(?:大师星)"
+    },
+    {
+      "name": "升星",
+      "category": "stats",
+      "aliases": [
+        "starred",
+        "升星",
+        "五星",
+        "十星"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])starred(?![a-z0-9_]))|(?:升星)|(?:五星)|(?:十星)"
+    },
+    {
+      "name": "Hot Potato Book",
+      "category": "stats",
+      "aliases": [
+        "hot potato book",
+        "热土豆书",
+        "hpb"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hot potato book(?![a-z0-9_]))|(?:热土豆书)|(?:(?<![a-z0-9_])hpb(?![a-z0-9_]))"
+    },
+    {
+      "name": "Fuming Potato Book",
+      "category": "stats",
+      "aliases": [
+        "fuming potato book",
+        "熏制土豆书"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fuming potato book(?![a-z0-9_]))|(?:熏制土豆书)"
+    },
+    {
+      "name": "Ultimate Wise",
+      "category": "stats",
+      "aliases": [
+        "ultimate wise",
+        "终极智慧"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ultimate wise(?![a-z0-9_]))|(?:终极智慧)"
+    },
+    {
+      "name": "Legion",
+      "category": "stats",
+      "aliases": [
+        "legion",
+        "军团附魔"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])legion(?![a-z0-9_]))|(?:军团附魔)"
+    },
+    {
+      "name": "Soul Eater",
+      "category": "stats",
+      "aliases": [
+        "soul eater",
+        "噬魂"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])soul eater(?![a-z0-9_]))|(?:噬魂)"
+    },
+    {
+      "name": "Fatal Tempo",
+      "category": "stats",
+      "aliases": [
+        "fatal tempo",
+        "致命节奏"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fatal tempo(?![a-z0-9_]))|(?:致命节奏)"
+    },
+    {
+      "name": "Duplex",
+      "category": "stats",
+      "aliases": [
+        "duplex",
+        "双重射击"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])duplex(?![a-z0-9_]))|(?:双重射击)"
+    },
+    {
+      "name": "Rend",
+      "category": "stats",
+      "aliases": [
+        "rend",
+        "撕裂"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rend(?![a-z0-9_]))|(?:撕裂)"
+    },
+    {
+      "name": "Chimera",
+      "category": "stats",
+      "aliases": [
+        "chimera",
+        "奇美拉"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])chimera(?![a-z0-9_]))|(?:奇美拉)"
+    },
+    {
+      "name": "One For All",
+      "category": "stats",
+      "aliases": [
+        "one for all",
+        "孤注一掷",
+        "ofa"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])one for all(?![a-z0-9_]))|(?:孤注一掷)|(?:(?<![a-z0-9_])ofa(?![a-z0-9_]))"
+    },
+    {
+      "name": "Swarm",
+      "category": "stats",
+      "aliases": [
+        "swarm",
+        "虫群"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])swarm(?![a-z0-9_]))|(?:虫群)"
+    },
+    {
+      "name": "Rejuvenate",
+      "category": "stats",
+      "aliases": [
+        "rejuvenate",
+        "回春"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rejuvenate(?![a-z0-9_]))|(?:回春)"
+    },
+    {
+      "name": "Overload",
+      "category": "stats",
+      "aliases": [
+        "overload",
+        "超载"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])overload(?![a-z0-9_]))|(?:超载)"
+    },
+    {
+      "name": "Accessories",
+      "category": "stats",
+      "aliases": [
+        "accessories",
+        "accessory",
+        "talismans",
+        "talisman",
+        "饰品",
+        "护符"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])accessories(?![a-z0-9_]))|(?:(?<![a-z0-9_])accessory(?![a-z0-9_]))|(?:(?<![a-z0-9_])talismans(?![a-z0-9_]))|(?:(?<![a-z0-9_])talisman(?![a-z0-9_]))|(?:饰品)|(?:护符)"
+    },
+    {
+      "name": "Power Stone",
+      "category": "stats",
+      "aliases": [
+        "power stone",
+        "力量石"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])power stone(?![a-z0-9_]))|(?:力量石)"
+    },
+    {
+      "name": "染料",
+      "category": "stats",
+      "aliases": [
+        "dye",
+        "染料"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dye(?![a-z0-9_]))|(?:染料)"
+    },
+    {
+      "name": "皮肤符文",
+      "category": "stats",
+      "aliases": [
+        "pet skin",
+        "rune",
+        "宠物皮肤",
+        "符文"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])pet skin(?![a-z0-9_]))|(?:(?<![a-z0-9_])rune(?![a-z0-9_]))|(?:宠物皮肤)|(?:符文)"
+    },
+    {
+      "name": "宠物",
+      "category": "pet",
+      "aliases": [
+        "pets",
+        "pet",
+        "宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])pets(?![a-z0-9_]))|(?:(?<![a-z0-9_])pet(?![a-z0-9_]))|(?:宠物)"
+    },
+    {
+      "name": "Golden Dragon",
+      "category": "pet",
+      "aliases": [
+        "golden dragon",
+        "gdrag",
+        "金龙"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])golden dragon(?![a-z0-9_]))|(?:(?<![a-z0-9_])gdrag(?![a-z0-9_]))|(?:金龙)"
+    },
+    {
+      "name": "Ender Dragon",
+      "category": "pet",
+      "aliases": [
+        "ender dragon",
+        "edrag",
+        "末影龙",
+        "黑龙"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ender dragon(?![a-z0-9_]))|(?:(?<![a-z0-9_])edrag(?![a-z0-9_]))|(?:末影龙)|(?:黑龙)"
+    },
+    {
+      "name": "Black Cat",
+      "category": "pet",
+      "aliases": [
+        "black cat",
+        "黑猫"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])black cat(?![a-z0-9_]))|(?:黑猫)"
+    },
+    {
+      "name": "Griffin",
+      "category": "pet",
+      "aliases": [
+        "griffin",
+        "狮鹫"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])griffin(?![a-z0-9_]))|(?:狮鹫)"
+    },
+    {
+      "name": "Elephant",
+      "category": "pet",
+      "aliases": [
+        "elephant",
+        "大象宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])elephant(?![a-z0-9_]))|(?:大象宠物)"
+    },
+    {
+      "name": "Mooshroom Cow",
+      "category": "pet",
+      "aliases": [
+        "mooshroom cow",
+        "蘑菇牛",
+        "哞菇"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mooshroom cow(?![a-z0-9_]))|(?:蘑菇牛)|(?:哞菇)"
+    },
+    {
+      "name": "Bal",
+      "category": "pet",
+      "aliases": [
+        "bal pet",
+        "巴尔宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bal pet(?![a-z0-9_]))|(?:巴尔宠物)"
+    },
+    {
+      "name": "Scatha",
+      "category": "pet",
+      "aliases": [
+        "scatha",
+        "斯卡萨",
+        "斯卡莎"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])scatha(?![a-z0-9_]))|(?:斯卡萨)|(?:斯卡莎)"
+    },
+    {
+      "name": "Ammonite",
+      "category": "pet",
+      "aliases": [
+        "ammonite",
+        "菊石"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ammonite(?![a-z0-9_]))|(?:菊石)"
+    },
+    {
+      "name": "Flying Fish",
+      "category": "pet",
+      "aliases": [
+        "flying fish",
+        "飞鱼"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])flying fish(?![a-z0-9_]))|(?:飞鱼)"
+    },
+    {
+      "name": "Dolphin",
+      "category": "pet",
+      "aliases": [
+        "dolphin",
+        "海豚"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dolphin(?![a-z0-9_]))|(?:海豚)"
+    },
+    {
+      "name": "Squid",
+      "category": "pet",
+      "aliases": [
+        "squid pet",
+        "鱿鱼宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])squid pet(?![a-z0-9_]))|(?:鱿鱼宠物)"
+    },
+    {
+      "name": "Megalodon",
+      "category": "pet",
+      "aliases": [
+        "megalodon",
+        "巨齿鲨"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])megalodon(?![a-z0-9_]))|(?:巨齿鲨)"
+    },
+    {
+      "name": "Blue Whale",
+      "category": "pet",
+      "aliases": [
+        "blue whale",
+        "蓝鲸"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])blue whale(?![a-z0-9_]))|(?:蓝鲸)"
+    },
+    {
+      "name": "Baby Yeti",
+      "category": "pet",
+      "aliases": [
+        "baby yeti",
+        "雪人宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])baby yeti(?![a-z0-9_]))|(?:雪人宠物)"
+    },
+    {
+      "name": "Sheep",
+      "category": "pet",
+      "aliases": [
+        "sheep pet",
+        "绵羊宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sheep pet(?![a-z0-9_]))|(?:绵羊宠物)"
+    },
+    {
+      "name": "Blaze Pet",
+      "category": "pet",
+      "aliases": [
+        "blaze pet",
+        "烈焰人宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])blaze pet(?![a-z0-9_]))|(?:烈焰人宠物)"
+    },
+    {
+      "name": "Enderman Pet",
+      "category": "pet",
+      "aliases": [
+        "enderman pet",
+        "末影人宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])enderman pet(?![a-z0-9_]))|(?:末影人宠物)"
+    },
+    {
+      "name": "Monkey",
+      "category": "pet",
+      "aliases": [
+        "monkey pet",
+        "猴子宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])monkey pet(?![a-z0-9_]))|(?:猴子宠物)"
+    },
+    {
+      "name": "Ocelot",
+      "category": "pet",
+      "aliases": [
+        "ocelot",
+        "豹猫"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ocelot(?![a-z0-9_]))|(?:豹猫)"
+    },
+    {
+      "name": "Phoenix",
+      "category": "pet",
+      "aliases": [
+        "phoenix pet",
+        "凤凰宠物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])phoenix pet(?![a-z0-9_]))|(?:凤凰宠物)"
+    },
+    {
+      "name": "Kat",
+      "category": "pet",
+      "aliases": [
+        "kat pet",
+        "宠物升级"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])kat pet(?![a-z0-9_]))|(?:宠物升级)"
+    },
+    {
+      "name": "Exp Share",
+      "category": "pet",
+      "aliases": [
+        "exp share",
+        "经验共享"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])exp share(?![a-z0-9_]))|(?:经验共享)"
+    },
+    {
+      "name": "Shelmet",
+      "category": "pet",
+      "aliases": [
+        "shelmet",
+        "龟壳"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])shelmet(?![a-z0-9_]))|(?:龟壳)"
+    },
+    {
+      "name": "地牢",
+      "category": "dungeon",
+      "aliases": [
+        "dungeons",
+        "dungeon",
+        "地下城",
+        "地牢"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dungeons(?![a-z0-9_]))|(?:(?<![a-z0-9_])dungeon(?![a-z0-9_]))|(?:地下城)|(?:地牢)"
+    },
+    {
+      "name": "Catacombs",
+      "category": "dungeon",
+      "aliases": [
+        "catacombs",
+        "catacomb",
+        "catas",
+        "cata",
+        "地牢等级"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])catacombs(?![a-z0-9_]))|(?:(?<![a-z0-9_])catacomb(?![a-z0-9_]))|(?:(?<![a-z0-9_])catas(?![a-z0-9_]))|(?:(?<![a-z0-9_])cata(?![a-z0-9_]))|(?:地牢等级)"
+    },
+    {
+      "name": "Master Mode",
+      "category": "dungeon",
+      "aliases": [
+        "master mode",
+        "大师模式"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])master mode(?![a-z0-9_]))|(?:大师模式)"
+    },
+    {
+      "name": "F1–F7",
+      "category": "dungeon",
+      "aliases": [
+        "r:(?<![a-z0-9_])f[1-7](?![a-z0-9_])"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])f[1-7](?![a-z0-9_]))"
+    },
+    {
+      "name": "M1–M7",
+      "category": "dungeon",
+      "aliases": [
+        "r:(?<![a-z0-9_])m[1-7](?![a-z0-9_])"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])m[1-7](?![a-z0-9_]))"
+    },
+    {
+      "name": "Cata 等级",
+      "category": "dungeon",
+      "aliases": [
+        "r:(?<![a-z0-9_])c(?:[1-9]|[1-4][0-9]|50)(?![a-z0-9_])"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])c(?:[1-9]|[1-4][0-9]|50)(?![a-z0-9_]))"
+    },
+    {
+      "name": "S+ 评分",
+      "category": "dungeon",
+      "aliases": [
+        "r:(?<![a-z0-9_])s\\+(?![a-z0-9_+])",
+        "s+评分"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])s\\+(?![a-z0-9_+]))|(?:s\\+评分)"
+    },
+    {
+      "name": "Secrets",
+      "category": "dungeon",
+      "aliases": [
+        "secrets",
+        "secret",
+        "找秘密",
+        "秘密点"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])secrets(?![a-z0-9_]))|(?:(?<![a-z0-9_])secret(?![a-z0-9_]))|(?:找秘密)|(?:秘密点)"
+    },
+    {
+      "name": "Blood Room",
+      "category": "dungeon",
+      "aliases": [
+        "blood room",
+        "blood rush",
+        "血房",
+        "血门"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])blood room(?![a-z0-9_]))|(?:(?<![a-z0-9_])blood rush(?![a-z0-9_]))|(?:血房)|(?:血门)"
+    },
+    {
+      "name": "Puzzle",
+      "category": "dungeon",
+      "aliases": [
+        "puzzles",
+        "puzzle",
+        "解谜",
+        "谜题"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])puzzles(?![a-z0-9_]))|(?:(?<![a-z0-9_])puzzle(?![a-z0-9_]))|(?:解谜)|(?:谜题)"
+    },
+    {
+      "name": "Trap Room",
+      "category": "dungeon",
+      "aliases": [
+        "trap room",
+        "陷阱房"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])trap room(?![a-z0-9_]))|(?:陷阱房)"
+    },
+    {
+      "name": "Fairy Room",
+      "category": "dungeon",
+      "aliases": [
+        "fairy room",
+        "仙女房"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fairy room(?![a-z0-9_]))|(?:仙女房)"
+    },
+    {
+      "name": "Wither Door",
+      "category": "dungeon",
+      "aliases": [
+        "wither door",
+        "凋零门"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wither door(?![a-z0-9_]))|(?:凋零门)"
+    },
+    {
+      "name": "Mimic",
+      "category": "dungeon",
+      "aliases": [
+        "mimic",
+        "拟态箱"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mimic(?![a-z0-9_]))|(?:拟态箱)"
+    },
+    {
+      "name": "清怪跑图",
+      "category": "dungeon",
+      "aliases": [
+        "clear room",
+        "清怪",
+        "跑图",
+        "清图"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])clear room(?![a-z0-9_]))|(?:清怪)|(?:跑图)|(?:清图)"
+    },
+    {
+      "name": "速通纪录",
+      "category": "dungeon",
+      "aliases": [
+        "personal best",
+        "破纪录",
+        "速通",
+        "速刷",
+        "首通"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])personal best(?![a-z0-9_]))|(?:破纪录)|(?:速通)|(?:速刷)|(?:首通)"
+    },
+    {
+      "name": "Party Finder",
+      "category": "dungeon",
+      "aliases": [
+        "party finder",
+        "找队伍",
+        "野队"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])party finder(?![a-z0-9_]))|(?:找队伍)|(?:野队)"
+    },
+    {
+      "name": "Tank",
+      "category": "dungeon",
+      "aliases": [
+        "tank",
+        "坦克"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])tank(?![a-z0-9_]))|(?:坦克)"
+    },
+    {
+      "name": "Healer",
+      "category": "dungeon",
+      "aliases": [
+        "healer",
+        "治疗职业",
+        "奶妈"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])healer(?![a-z0-9_]))|(?:治疗职业)|(?:奶妈)"
+    },
+    {
+      "name": "Archer",
+      "category": "dungeon",
+      "aliases": [
+        "archer",
+        "arch",
+        "弓手"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])archer(?![a-z0-9_]))|(?:(?<![a-z0-9_])arch(?![a-z0-9_]))|(?:弓手)"
+    },
+    {
+      "name": "Mage",
+      "category": "dungeon",
+      "aliases": [
+        "mage",
+        "法师"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mage(?![a-z0-9_]))|(?:法师)"
+    },
+    {
+      "name": "Berserker",
+      "category": "dungeon",
+      "aliases": [
+        "berserker",
+        "berserk",
+        "bers",
+        "狂战"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])berserker(?![a-z0-9_]))|(?:(?<![a-z0-9_])berserk(?![a-z0-9_]))|(?:(?<![a-z0-9_])bers(?![a-z0-9_]))|(?:狂战)"
+    },
+    {
+      "name": "LCM",
+      "category": "dungeon",
+      "aliases": [
+        "lcm",
+        "左键法"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])lcm(?![a-z0-9_]))|(?:左键法)"
+    },
+    {
+      "name": "RCM",
+      "category": "dungeon",
+      "aliases": [
+        "rcm",
+        "右键法"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rcm(?![a-z0-9_]))|(?:右键法)"
+    },
+    {
+      "name": "Carry",
+      "category": "dungeon",
+      "aliases": [
+        "carrying",
+        "carries",
+        "carry",
+        "带刷",
+        "带过",
+        "带本"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])carrying(?![a-z0-9_]))|(?:(?<![a-z0-9_])carries(?![a-z0-9_]))|(?:(?<![a-z0-9_])carry(?![a-z0-9_]))|(?:带刷)|(?:带过)|(?:带本)"
+    },
+    {
+      "name": "Necron's Handle",
+      "category": "dungeon",
+      "aliases": [
+        "necron's handle",
+        "necron handle",
+        "handle",
+        "凋零柄",
+        "手柄"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])necron's handle(?![a-z0-9_]))|(?:(?<![a-z0-9_])necron handle(?![a-z0-9_]))|(?:(?<![a-z0-9_])handle(?![a-z0-9_]))|(?:凋零柄)|(?:手柄)"
+    },
+    {
+      "name": "Wither Scroll",
+      "category": "dungeon",
+      "aliases": [
+        "wither scroll",
+        "凋零卷轴",
+        "凋零之盾",
+        "暗影扭曲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wither scroll(?![a-z0-9_]))|(?:凋零卷轴)|(?:凋零之盾)|(?:暗影扭曲)"
+    },
+    {
+      "name": "Dungeon Chest",
+      "category": "dungeon",
+      "aliases": [
+        "bedrock chest",
+        "地牢宝箱",
+        "基岩箱"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bedrock chest(?![a-z0-9_]))|(?:地牢宝箱)|(?:基岩箱)"
+    },
+    {
+      "name": "Kismet Feather",
+      "category": "dungeon",
+      "aliases": [
+        "kismet feather",
+        "重骰羽毛",
+        "羽毛重抽"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])kismet feather(?![a-z0-9_]))|(?:重骰羽毛)|(?:羽毛重抽)"
+    },
+    {
+      "name": "Blood Skip",
+      "category": "dungeon",
+      "aliases": [
+        "blood skip",
+        "跳血"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])blood skip(?![a-z0-9_]))|(?:跳血)"
+    },
+    {
+      "name": "Terminal",
+      "category": "dungeon",
+      "aliases": [
+        "terminals",
+        "terminal",
+        "终端",
+        "端子"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])terminals(?![a-z0-9_]))|(?:(?<![a-z0-9_])terminal(?![a-z0-9_]))|(?:终端)|(?:端子)"
+    },
+    {
+      "name": "Stonk",
+      "category": "dungeon",
+      "aliases": [
+        "stonk",
+        "穿墙镐"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])stonk(?![a-z0-9_]))|(?:穿墙镐)"
+    },
+    {
+      "name": "Bonzo",
+      "category": "dungeon",
+      "aliases": [
+        "bonzo",
+        "邦佐"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bonzo(?![a-z0-9_]))|(?:邦佐)"
+    },
+    {
+      "name": "Scarf",
+      "category": "dungeon",
+      "aliases": [
+        "scarf",
+        "斯卡夫"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])scarf(?![a-z0-9_]))|(?:斯卡夫)"
+    },
+    {
+      "name": "Professor",
+      "category": "dungeon",
+      "aliases": [
+        "the professor",
+        "教授boss"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])the professor(?![a-z0-9_]))|(?:教授boss)"
+    },
+    {
+      "name": "Thorn",
+      "category": "dungeon",
+      "aliases": [
+        "荆棘boss",
+        "thorn"
+      ],
+      "context": "",
+      "pattern": "(?:荆棘boss)|(?:(?<![a-z0-9_])thorn(?![a-z0-9_]))"
+    },
+    {
+      "name": "Sadan",
+      "category": "dungeon",
+      "aliases": [
+        "sadan",
+        "萨丹"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sadan(?![a-z0-9_]))|(?:萨丹)"
+    },
+    {
+      "name": "Goldor Phase",
+      "category": "dungeon",
+      "aliases": [
+        "goldor phase",
+        "金柱阶段"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])goldor phase(?![a-z0-9_]))|(?:金柱阶段)"
+    },
+    {
+      "name": "Kuudra",
+      "category": "kuudra",
+      "aliases": [
+        "kuudra",
+        "库德拉",
+        "库拉德"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])kuudra(?![a-z0-9_]))|(?:库德拉)|(?:库拉德)"
+    },
+    {
+      "name": "Kuudra Tiers",
+      "category": "kuudra",
+      "aliases": [
+        "r:(?<![a-z0-9_])t[1-5](?![a-z0-9_])"
+      ],
+      "context": "kuudra|库德拉|库拉德|捞补给|绯红岛",
+      "pattern": "(?:(?<![a-z0-9_])t[1-5](?![a-z0-9_]))"
+    },
+    {
+      "name": "Crimson Isle",
+      "category": "kuudra",
+      "aliases": [
+        "crimson isle",
+        "绯红岛"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])crimson isle(?![a-z0-9_]))|(?:绯红岛)"
+    },
+    {
+      "name": "Kuudra Supplies",
+      "category": "kuudra",
+      "aliases": [
+        "supply crate",
+        "supplies",
+        "补给箱",
+        "捞补给"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])supply crate(?![a-z0-9_]))|(?:(?<![a-z0-9_])supplies(?![a-z0-9_]))|(?:补给箱)|(?:捞补给)"
+    },
+    {
+      "name": "Kuudra Stun",
+      "category": "kuudra",
+      "aliases": [
+        "kuudra stun",
+        "stunner",
+        "眩晕鱼",
+        "晕鱼"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])kuudra stun(?![a-z0-9_]))|(?:(?<![a-z0-9_])stunner(?![a-z0-9_]))|(?:眩晕鱼)|(?:晕鱼)"
+    },
+    {
+      "name": "Kuudra Key",
+      "category": "kuudra",
+      "aliases": [
+        "kuudra key",
+        "库德拉钥匙"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])kuudra key(?![a-z0-9_]))|(?:库德拉钥匙)"
+    },
+    {
+      "name": "Kuudra Teeth",
+      "category": "kuudra",
+      "aliases": [
+        "kuudra teeth",
+        "kuudra tooth",
+        "库德拉牙"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])kuudra teeth(?![a-z0-9_]))|(?:(?<![a-z0-9_])kuudra tooth(?![a-z0-9_]))|(?:库德拉牙)"
+    },
+    {
+      "name": "Attribute Shard",
+      "category": "kuudra",
+      "aliases": [
+        "attribute shard",
+        "属性碎片"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])attribute shard(?![a-z0-9_]))|(?:属性碎片)"
+    },
+    {
+      "name": "Heavy Pearl",
+      "category": "kuudra",
+      "aliases": [
+        "heavy pearl",
+        "重珍珠"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])heavy pearl(?![a-z0-9_]))|(?:重珍珠)"
+    },
+    {
+      "name": "Dojo",
+      "category": "kuudra",
+      "aliases": [
+        "dojo",
+        "道场"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dojo(?![a-z0-9_]))|(?:道场)"
+    },
+    {
+      "name": "Reputation",
+      "category": "kuudra",
+      "aliases": [
+        "reputation",
+        "声望"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])reputation(?![a-z0-9_]))|(?:声望)"
+    },
+    {
+      "name": "Ashfang",
+      "category": "kuudra",
+      "aliases": [
+        "ashfang",
+        "灰牙"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ashfang(?![a-z0-9_]))|(?:灰牙)"
+    },
+    {
+      "name": "Vanquisher",
+      "category": "kuudra",
+      "aliases": [
+        "vanquisher",
+        "征服者"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])vanquisher(?![a-z0-9_]))|(?:征服者)"
+    },
+    {
+      "name": "Bladesoul",
+      "category": "kuudra",
+      "aliases": [
+        "bladesoul",
+        "刀魂"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bladesoul(?![a-z0-9_]))|(?:刀魂)"
+    },
+    {
+      "name": "Duke",
+      "category": "kuudra",
+      "aliases": [
+        "barbarian duke",
+        "蛮族公爵"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])barbarian duke(?![a-z0-9_]))|(?:蛮族公爵)"
+    },
+    {
+      "name": "Mage Outlaw",
+      "category": "kuudra",
+      "aliases": [
+        "mage outlaw",
+        "法师逃犯"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mage outlaw(?![a-z0-9_]))|(?:法师逃犯)"
+    },
+    {
+      "name": "Mycelium",
+      "category": "kuudra",
+      "aliases": [
+        "mycelium",
+        "菌丝"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mycelium(?![a-z0-9_]))|(?:菌丝)"
+    },
+    {
+      "name": "Red Sand",
+      "category": "kuudra",
+      "aliases": [
+        "red sand",
+        "红沙"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])red sand(?![a-z0-9_]))|(?:红沙)"
+    },
+    {
+      "name": "Slayer",
+      "category": "slayer",
+      "aliases": [
+        "slayers",
+        "slayer",
+        "猎杀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])slayers(?![a-z0-9_]))|(?:(?<![a-z0-9_])slayer(?![a-z0-9_]))|(?:猎杀)"
+    },
+    {
+      "name": "Revenant Horror",
+      "category": "slayer",
+      "aliases": [
+        "revenant horror",
+        "revenant",
+        "僵尸slayer",
+        "僵尸猎杀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])revenant horror(?![a-z0-9_]))|(?:(?<![a-z0-9_])revenant(?![a-z0-9_]))|(?:僵尸slayer)|(?:僵尸猎杀)"
+    },
+    {
+      "name": "Tarantula Broodfather",
+      "category": "slayer",
+      "aliases": [
+        "tarantula broodfather",
+        "tarantula",
+        "蜘蛛slayer",
+        "蜘蛛猎杀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])tarantula broodfather(?![a-z0-9_]))|(?:(?<![a-z0-9_])tarantula(?![a-z0-9_]))|(?:蜘蛛slayer)|(?:蜘蛛猎杀)"
+    },
+    {
+      "name": "Sven Packmaster",
+      "category": "slayer",
+      "aliases": [
+        "sven packmaster",
+        "狼slayer",
+        "sven",
+        "狼王"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sven packmaster(?![a-z0-9_]))|(?:狼slayer)|(?:(?<![a-z0-9_])sven(?![a-z0-9_]))|(?:狼王)"
+    },
+    {
+      "name": "Voidgloom Seraph",
+      "category": "slayer",
+      "aliases": [
+        "voidgloom seraph",
+        "voidgloom",
+        "末影slayer",
+        "eman",
+        "末影猎杀",
+        "虚空幽魂"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])voidgloom seraph(?![a-z0-9_]))|(?:(?<![a-z0-9_])voidgloom(?![a-z0-9_]))|(?:末影slayer)|(?:(?<![a-z0-9_])eman(?![a-z0-9_]))|(?:末影猎杀)|(?:虚空幽魂)"
+    },
+    {
+      "name": "Inferno Demonlord",
+      "category": "slayer",
+      "aliases": [
+        "inferno demonlord",
+        "烈焰slayer",
+        "烈焰猎杀",
+        "烈焰恶魔"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])inferno demonlord(?![a-z0-9_]))|(?:烈焰slayer)|(?:烈焰猎杀)|(?:烈焰恶魔)"
+    },
+    {
+      "name": "Riftstalker Bloodfiend",
+      "category": "slayer",
+      "aliases": [
+        "riftstalker bloodfiend",
+        "bloodfiend",
+        "吸血鬼slayer",
+        "吸血鬼猎杀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])riftstalker bloodfiend(?![a-z0-9_]))|(?:(?<![a-z0-9_])bloodfiend(?![a-z0-9_]))|(?:吸血鬼slayer)|(?:吸血鬼猎杀)"
+    },
+    {
+      "name": "Judgement Core",
+      "category": "slayer",
+      "aliases": [
+        "judgement core",
+        "judgment core",
+        "审判核心"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])judgement core(?![a-z0-9_]))|(?:(?<![a-z0-9_])judgment core(?![a-z0-9_]))|(?:审判核心)"
+    },
+    {
+      "name": "Warden Heart",
+      "category": "slayer",
+      "aliases": [
+        "warden heart",
+        "守望之心"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])warden heart(?![a-z0-9_]))|(?:守望之心)"
+    },
+    {
+      "name": "Overflux",
+      "category": "slayer",
+      "aliases": [
+        "overflux",
+        "大电容"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])overflux(?![a-z0-9_]))|(?:大电容)"
+    },
+    {
+      "name": "Plasmaflux",
+      "category": "slayer",
+      "aliases": [
+        "plasmaflux",
+        "等离子电容"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])plasmaflux(?![a-z0-9_]))|(?:等离子电容)"
+    },
+    {
+      "name": "Sos Flare",
+      "category": "slayer",
+      "aliases": [
+        "sos flare",
+        "sos信号弹"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sos flare(?![a-z0-9_]))|(?:sos信号弹)"
+    },
+    {
+      "name": "Enderman T4",
+      "category": "slayer",
+      "aliases": [
+        "r:(?:t4\\s*(?:eman|voidgloom)|(?:eman|voidgloom)\\s*t4)",
+        "t4小黑"
+      ],
+      "context": "",
+      "pattern": "(?:(?:t4\\s*(?:eman|voidgloom)|(?:eman|voidgloom)\\s*t4))|(?:t4小黑)"
+    },
+    {
+      "name": "Blaze Slayer",
+      "category": "slayer",
+      "aliases": [
+        "blaze slayer",
+        "烈焰人猎杀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])blaze slayer(?![a-z0-9_]))|(?:烈焰人猎杀)"
+    },
+    {
+      "name": "挖矿",
+      "category": "mining",
+      "aliases": [
+        "mining",
+        "挖矿",
+        "挂矿"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mining(?![a-z0-9_]))|(?:挖矿)|(?:挂矿)"
+    },
+    {
+      "name": "Heart of the Mountain",
+      "category": "mining",
+      "aliases": [
+        "heart of the mountain",
+        "hotm",
+        "山之心"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])heart of the mountain(?![a-z0-9_]))|(?:(?<![a-z0-9_])hotm(?![a-z0-9_]))|(?:山之心)"
+    },
+    {
+      "name": "Mithril",
+      "category": "mining",
+      "aliases": [
+        "mithril",
+        "秘银"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mithril(?![a-z0-9_]))|(?:秘银)"
+    },
+    {
+      "name": "Titanium",
+      "category": "mining",
+      "aliases": [
+        "titanium",
+        "钛矿"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])titanium(?![a-z0-9_]))|(?:钛矿)"
+    },
+    {
+      "name": "Gemstone",
+      "category": "mining",
+      "aliases": [
+        "gemstones",
+        "gemstone",
+        "宝石"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])gemstones(?![a-z0-9_]))|(?:(?<![a-z0-9_])gemstone(?![a-z0-9_]))|(?:宝石)"
+    },
+    {
+      "name": "Dwarven Mines",
+      "category": "mining",
+      "aliases": [
+        "dwarven mines",
+        "矮人矿坑"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dwarven mines(?![a-z0-9_]))|(?:矮人矿坑)"
+    },
+    {
+      "name": "Crystal Hollows",
+      "category": "mining",
+      "aliases": [
+        "crystal hollows",
+        "水晶洞穴"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])crystal hollows(?![a-z0-9_]))|(?:水晶洞穴)"
+    },
+    {
+      "name": "Glacite Tunnels",
+      "category": "mining",
+      "aliases": [
+        "glacite tunnels",
+        "冰川隧道"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])glacite tunnels(?![a-z0-9_]))|(?:冰川隧道)"
+    },
+    {
+      "name": "Mineshaft",
+      "category": "mining",
+      "aliases": [
+        "mineshaft",
+        "矿井"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mineshaft(?![a-z0-9_]))|(?:矿井)"
+    },
+    {
+      "name": "Crystal Nucleus",
+      "category": "mining",
+      "aliases": [
+        "crystal nucleus",
+        "水晶核心",
+        "跑核"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])crystal nucleus(?![a-z0-9_]))|(?:水晶核心)|(?:跑核)"
+    },
+    {
+      "name": "Powder",
+      "category": "mining",
+      "aliases": [
+        "gemstone powder",
+        "mithril powder",
+        "glacite powder",
+        "秘银粉",
+        "宝石粉",
+        "挖粉",
+        "刷粉"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])gemstone powder(?![a-z0-9_]))|(?:(?<![a-z0-9_])mithril powder(?![a-z0-9_]))|(?:(?<![a-z0-9_])glacite powder(?![a-z0-9_]))|(?:秘银粉)|(?:宝石粉)|(?:挖粉)|(?:刷粉)"
+    },
+    {
+      "name": "Commissions",
+      "category": "mining",
+      "aliases": [
+        "commissions",
+        "commission",
+        "委托任务"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])commissions(?![a-z0-9_]))|(?:(?<![a-z0-9_])commission(?![a-z0-9_]))|(?:委托任务)"
+    },
+    {
+      "name": "Mining Speed",
+      "category": "mining",
+      "aliases": [
+        "mining speed",
+        "挖掘速度",
+        "挖速"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mining speed(?![a-z0-9_]))|(?:挖掘速度)|(?:挖速)"
+    },
+    {
+      "name": "Mining Fortune",
+      "category": "mining",
+      "aliases": [
+        "mining fortune",
+        "挖掘幸运",
+        "矿运"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mining fortune(?![a-z0-9_]))|(?:挖掘幸运)|(?:矿运)"
+    },
+    {
+      "name": "Pristine",
+      "category": "mining",
+      "aliases": [
+        "pristine",
+        "纯净属性"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])pristine(?![a-z0-9_]))|(?:纯净属性)"
+    },
+    {
+      "name": "Drill",
+      "category": "mining",
+      "aliases": [
+        "drills",
+        "drill",
+        "钻机",
+        "钻头"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])drills(?![a-z0-9_]))|(?:(?<![a-z0-9_])drill(?![a-z0-9_]))|(?:钻机)|(?:钻头)"
+    },
+    {
+      "name": "Pickonimbus",
+      "category": "mining",
+      "aliases": [
+        "pickonimbus",
+        "皮克镐"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])pickonimbus(?![a-z0-9_]))|(?:皮克镐)"
+    },
+    {
+      "name": "Gemstone Gauntlet",
+      "category": "mining",
+      "aliases": [
+        "gemstone gauntlet",
+        "宝石手套"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])gemstone gauntlet(?![a-z0-9_]))|(?:宝石手套)"
+    },
+    {
+      "name": "Fuel Tank",
+      "category": "mining",
+      "aliases": [
+        "fuel tank",
+        "油箱"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fuel tank(?![a-z0-9_]))|(?:油箱)"
+    },
+    {
+      "name": "Jungle Pickaxe",
+      "category": "mining",
+      "aliases": [
+        "jungle pickaxe",
+        "丛林镐"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])jungle pickaxe(?![a-z0-9_]))|(?:丛林镐)"
+    },
+    {
+      "name": "Worm Fishing",
+      "category": "mining",
+      "aliases": [
+        "worm fishing",
+        "挂虫",
+        "钓虫"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])worm fishing(?![a-z0-9_]))|(?:挂虫)|(?:钓虫)"
+    },
+    {
+      "name": "Worm Membrane",
+      "category": "mining",
+      "aliases": [
+        "worm membrane",
+        "虫膜"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])worm membrane(?![a-z0-9_]))|(?:虫膜)"
+    },
+    {
+      "name": "Metal Detector",
+      "category": "mining",
+      "aliases": [
+        "metal detector",
+        "金属探测器"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])metal detector(?![a-z0-9_]))|(?:金属探测器)"
+    },
+    {
+      "name": "Nucleus Run",
+      "category": "mining",
+      "aliases": [
+        "nucleus run",
+        "核跑"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])nucleus run(?![a-z0-9_]))|(?:核跑)"
+    },
+    {
+      "name": "Glossy Gemstone",
+      "category": "mining",
+      "aliases": [
+        "glossy gemstone",
+        "光泽宝石"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])glossy gemstone(?![a-z0-9_]))|(?:光泽宝石)"
+    },
+    {
+      "name": "农业",
+      "category": "farming",
+      "aliases": [
+        "farming",
+        "农业",
+        "种田",
+        "种地"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])farming(?![a-z0-9_]))|(?:农业)|(?:种田)|(?:种地)"
+    },
+    {
+      "name": "Garden",
+      "category": "farming",
+      "aliases": [
+        "garden",
+        "花园"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])garden(?![a-z0-9_]))|(?:花园)"
+    },
+    {
+      "name": "Farming Fortune",
+      "category": "farming",
+      "aliases": [
+        "farming fortune",
+        "农业幸运",
+        "种植幸运",
+        "ff"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])farming fortune(?![a-z0-9_]))|(?:农业幸运)|(?:种植幸运)|(?:(?<![a-z0-9_])ff(?![a-z0-9_]))"
+    },
+    {
+      "name": "Jacob's Contest",
+      "category": "farming",
+      "aliases": [
+        "jacob's contest",
+        "jacob contest",
+        "作物竞赛",
+        "农业竞赛",
+        "雅各布"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])jacob's contest(?![a-z0-9_]))|(?:(?<![a-z0-9_])jacob contest(?![a-z0-9_]))|(?:作物竞赛)|(?:农业竞赛)|(?:雅各布)"
+    },
+    {
+      "name": "Pest",
+      "category": "farming",
+      "aliases": [
+        "pests",
+        "pest",
+        "害虫",
+        "抓虫"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])pests(?![a-z0-9_]))|(?:(?<![a-z0-9_])pest(?![a-z0-9_]))|(?:害虫)|(?:抓虫)"
+    },
+    {
+      "name": "Vacuum",
+      "category": "farming",
+      "aliases": [
+        "vacuum",
+        "吸尘器"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])vacuum(?![a-z0-9_]))|(?:吸尘器)"
+    },
+    {
+      "name": "Visitor",
+      "category": "farming",
+      "aliases": [
+        "visitors",
+        "visitor",
+        "访客"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])visitors(?![a-z0-9_]))|(?:(?<![a-z0-9_])visitor(?![a-z0-9_]))|(?:访客)"
+    },
+    {
+      "name": "Composter",
+      "category": "farming",
+      "aliases": [
+        "composter",
+        "堆肥机"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])composter(?![a-z0-9_]))|(?:堆肥机)"
+    },
+    {
+      "name": "Sprayonator",
+      "category": "farming",
+      "aliases": [
+        "sprayonator",
+        "喷洒器"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sprayonator(?![a-z0-9_]))|(?:喷洒器)"
+    },
+    {
+      "name": "Lotus",
+      "category": "farming",
+      "aliases": [
+        "lotus",
+        "莲花配件"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])lotus(?![a-z0-9_]))|(?:莲花配件)"
+    },
+    {
+      "name": "Anita",
+      "category": "farming",
+      "aliases": [
+        "anita",
+        "安妮塔"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])anita(?![a-z0-9_]))|(?:安妮塔)"
+    },
+    {
+      "name": "Dedication",
+      "category": "farming",
+      "aliases": [
+        "dedication",
+        "奉献附魔"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dedication(?![a-z0-9_]))|(?:奉献附魔)"
+    },
+    {
+      "name": "Cultivating",
+      "category": "farming",
+      "aliases": [
+        "cultivating",
+        "耕耘附魔"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])cultivating(?![a-z0-9_]))|(?:耕耘附魔)"
+    },
+    {
+      "name": "Bountiful",
+      "category": "farming",
+      "aliases": [
+        "bountiful",
+        "丰收重铸"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bountiful(?![a-z0-9_]))|(?:丰收重铸)"
+    },
+    {
+      "name": "Melon Dicer",
+      "category": "farming",
+      "aliases": [
+        "melon dicer",
+        "西瓜斧"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])melon dicer(?![a-z0-9_]))|(?:西瓜斧)"
+    },
+    {
+      "name": "Pumpkin Dicer",
+      "category": "farming",
+      "aliases": [
+        "pumpkin dicer",
+        "南瓜斧"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])pumpkin dicer(?![a-z0-9_]))|(?:南瓜斧)"
+    },
+    {
+      "name": "Cactus Knife",
+      "category": "farming",
+      "aliases": [
+        "cactus knife",
+        "仙人掌刀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])cactus knife(?![a-z0-9_]))|(?:仙人掌刀)"
+    },
+    {
+      "name": "Fungi Cutter",
+      "category": "farming",
+      "aliases": [
+        "fungi cutter",
+        "蘑菇刀"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fungi cutter(?![a-z0-9_]))|(?:蘑菇刀)"
+    },
+    {
+      "name": "Sugar Cane Hoe",
+      "category": "farming",
+      "aliases": [
+        "turing sugar cane hoe",
+        "甘蔗锄"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])turing sugar cane hoe(?![a-z0-9_]))|(?:甘蔗锄)"
+    },
+    {
+      "name": "Nether Wart Hoe",
+      "category": "farming",
+      "aliases": [
+        "newton nether warts hoe",
+        "疣锄"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])newton nether warts hoe(?![a-z0-9_]))|(?:疣锄)"
+    },
+    {
+      "name": "Farming Weight",
+      "category": "farming",
+      "aliases": [
+        "farming weight",
+        "农业权重"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])farming weight(?![a-z0-9_]))|(?:农业权重)"
+    },
+    {
+      "name": "钓鱼",
+      "category": "fishing",
+      "aliases": [
+        "fishing",
+        "钓鱼趴",
+        "钓鱼",
+        "鱼趴"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fishing(?![a-z0-9_]))|(?:钓鱼趴)|(?:钓鱼)|(?:鱼趴)"
+    },
+    {
+      "name": "Sea Creature",
+      "category": "fishing",
+      "aliases": [
+        "sea creatures",
+        "sea creature",
+        "海怪"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sea creatures(?![a-z0-9_]))|(?:(?<![a-z0-9_])sea creature(?![a-z0-9_]))|(?:海怪)"
+    },
+    {
+      "name": "Sea Creature Chance",
+      "category": "fishing",
+      "aliases": [
+        "sea creature chance",
+        "海怪概率",
+        "scc"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sea creature chance(?![a-z0-9_]))|(?:海怪概率)|(?:(?<![a-z0-9_])scc(?![a-z0-9_]))"
+    },
+    {
+      "name": "Fishing Speed",
+      "category": "fishing",
+      "aliases": [
+        "fishing speed",
+        "钓鱼速度"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fishing speed(?![a-z0-9_]))|(?:钓鱼速度)"
+    },
+    {
+      "name": "Trophy Fish",
+      "category": "fishing",
+      "aliases": [
+        "trophy fishing",
+        "trophy fish",
+        "战利品鱼",
+        "奖杯鱼"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])trophy fishing(?![a-z0-9_]))|(?:(?<![a-z0-9_])trophy fish(?![a-z0-9_]))|(?:战利品鱼)|(?:奖杯鱼)"
+    },
+    {
+      "name": "Lava Fishing",
+      "category": "fishing",
+      "aliases": [
+        "lava fishing",
+        "岩浆钓鱼",
+        "熔岩钓鱼"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])lava fishing(?![a-z0-9_]))|(?:岩浆钓鱼)|(?:熔岩钓鱼)"
+    },
+    {
+      "name": "Thunder",
+      "category": "fishing",
+      "aliases": [
+        "thunder sea creature",
+        "雷鱼"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])thunder sea creature(?![a-z0-9_]))|(?:雷鱼)"
+    },
+    {
+      "name": "Jawbus",
+      "category": "fishing",
+      "aliases": [
+        "jawbus",
+        "颚巴斯"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])jawbus(?![a-z0-9_]))|(?:颚巴斯)"
+    },
+    {
+      "name": "Golden Fish",
+      "category": "fishing",
+      "aliases": [
+        "golden fish",
+        "金鱼"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])golden fish(?![a-z0-9_]))|(?:金鱼)"
+    },
+    {
+      "name": "Magma Lord",
+      "category": "fishing",
+      "aliases": [
+        "magma lord",
+        "熔岩领主"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])magma lord(?![a-z0-9_]))|(?:熔岩领主)"
+    },
+    {
+      "name": "Thunder Armor",
+      "category": "fishing",
+      "aliases": [
+        "thunder armor",
+        "雷霆甲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])thunder armor(?![a-z0-9_]))|(?:雷霆甲)"
+    },
+    {
+      "name": "Magma Rod",
+      "category": "fishing",
+      "aliases": [
+        "magma rod",
+        "熔岩钓竿"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])magma rod(?![a-z0-9_]))|(?:熔岩钓竿)"
+    },
+    {
+      "name": "Inferno Rod",
+      "category": "fishing",
+      "aliases": [
+        "inferno rod",
+        "地狱钓竿"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])inferno rod(?![a-z0-9_]))|(?:地狱钓竿)"
+    },
+    {
+      "name": "Hellfire Rod",
+      "category": "fishing",
+      "aliases": [
+        "hellfire rod",
+        "狱火钓竿"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hellfire rod(?![a-z0-9_]))|(?:狱火钓竿)"
+    },
+    {
+      "name": "Rod of the Sea",
+      "category": "fishing",
+      "aliases": [
+        "rod of the sea",
+        "海洋之竿"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rod of the sea(?![a-z0-9_]))|(?:海洋之竿)"
+    },
+    {
+      "name": "Double Hook",
+      "category": "fishing",
+      "aliases": [
+        "double hook",
+        "双钩"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])double hook(?![a-z0-9_]))|(?:双钩)"
+    },
+    {
+      "name": "Fishing Festival",
+      "category": "fishing",
+      "aliases": [
+        "fishing festival",
+        "钓鱼节"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fishing festival(?![a-z0-9_]))|(?:钓鱼节)"
+    },
+    {
+      "name": "Shark",
+      "category": "fishing",
+      "aliases": [
+        "great white shark",
+        "大白鲨"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])great white shark(?![a-z0-9_]))|(?:大白鲨)"
+    },
+    {
+      "name": "Yeti",
+      "category": "fishing",
+      "aliases": [
+        "yeti sea creature",
+        "雪人海怪"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])yeti sea creature(?![a-z0-9_]))|(?:雪人海怪)"
+    },
+    {
+      "name": "伐木",
+      "category": "foraging",
+      "aliases": [
+        "foraging",
+        "伐木",
+        "砍树"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])foraging(?![a-z0-9_]))|(?:伐木)|(?:砍树)"
+    },
+    {
+      "name": "Heart of the Forest",
+      "category": "foraging",
+      "aliases": [
+        "heart of the forest",
+        "hotf",
+        "森林之心",
+        "林之心"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])heart of the forest(?![a-z0-9_]))|(?:(?<![a-z0-9_])hotf(?![a-z0-9_]))|(?:森林之心)|(?:林之心)"
+    },
+    {
+      "name": "Galatea",
+      "category": "foraging",
+      "aliases": [
+        "galatea",
+        "加拉蒂亚"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])galatea(?![a-z0-9_]))|(?:加拉蒂亚)"
+    },
+    {
+      "name": "Hunting",
+      "category": "foraging",
+      "aliases": [
+        "hunting",
+        "狩猎"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hunting(?![a-z0-9_]))|(?:狩猎)"
+    },
+    {
+      "name": "Safari",
+      "category": "foraging",
+      "aliases": [
+        "safari",
+        "狩猎团"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])safari(?![a-z0-9_]))|(?:狩猎团)"
+    },
+    {
+      "name": "Shard",
+      "category": "foraging",
+      "aliases": [
+        "shards",
+        "shard",
+        "碎片"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])shards(?![a-z0-9_]))|(?:(?<![a-z0-9_])shard(?![a-z0-9_]))|(?:碎片)"
+    },
+    {
+      "name": "Forest Whispers",
+      "category": "foraging",
+      "aliases": [
+        "forest whispers",
+        "森林低语"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])forest whispers(?![a-z0-9_]))|(?:森林低语)"
+    },
+    {
+      "name": "Treecapitator",
+      "category": "foraging",
+      "aliases": [
+        "treecapitator",
+        "砍树斧"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])treecapitator(?![a-z0-9_]))|(?:砍树斧)"
+    },
+    {
+      "name": "Jungle Axe",
+      "category": "foraging",
+      "aliases": [
+        "jungle axe",
+        "丛林斧"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])jungle axe(?![a-z0-9_]))|(?:丛林斧)"
+    },
+    {
+      "name": "Hunting Box",
+      "category": "foraging",
+      "aliases": [
+        "hunting box",
+        "狩猎盒"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hunting box(?![a-z0-9_]))|(?:狩猎盒)"
+    },
+    {
+      "name": "Fishing Net",
+      "category": "foraging",
+      "aliases": [
+        "fishing net",
+        "渔网"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fishing net(?![a-z0-9_]))|(?:渔网)"
+    },
+    {
+      "name": "Attribute Fusion",
+      "category": "foraging",
+      "aliases": [
+        "attribute fusion",
+        "属性融合"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])attribute fusion(?![a-z0-9_]))|(?:属性融合)"
+    },
+    {
+      "name": "Tree Gifts",
+      "category": "foraging",
+      "aliases": [
+        "tree gifts",
+        "tree gift",
+        "树木礼物"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])tree gifts(?![a-z0-9_]))|(?:(?<![a-z0-9_])tree gift(?![a-z0-9_]))|(?:树木礼物)"
+    },
+    {
+      "name": "Rift",
+      "category": "rift",
+      "aliases": [
+        "rift",
+        "裂隙",
+        "裂缝"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rift(?![a-z0-9_]))|(?:裂隙)|(?:裂缝)"
+    },
+    {
+      "name": "Motes",
+      "category": "rift",
+      "aliases": [
+        "motes",
+        "微粒"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])motes(?![a-z0-9_]))|(?:微粒)"
+    },
+    {
+      "name": "Rift Time",
+      "category": "rift",
+      "aliases": [
+        "rift time",
+        "裂隙时间"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rift time(?![a-z0-9_]))|(?:裂隙时间)"
+    },
+    {
+      "name": "Mirrorverse",
+      "category": "rift",
+      "aliases": [
+        "mirrorverse",
+        "镜像世界"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mirrorverse(?![a-z0-9_]))|(?:镜像世界)"
+    },
+    {
+      "name": "Vampire",
+      "category": "rift",
+      "aliases": [
+        "vampire",
+        "吸血鬼"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])vampire(?![a-z0-9_]))|(?:吸血鬼)"
+    },
+    {
+      "name": "Rift Necklace",
+      "category": "rift",
+      "aliases": [
+        "rift necklace",
+        "裂隙项链"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rift necklace(?![a-z0-9_]))|(?:裂隙项链)"
+    },
+    {
+      "name": "Rift Prism",
+      "category": "rift",
+      "aliases": [
+        "rift prism",
+        "裂隙棱镜"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rift prism(?![a-z0-9_]))|(?:裂隙棱镜)"
+    },
+    {
+      "name": "Enigma Souls",
+      "category": "rift",
+      "aliases": [
+        "enigma souls",
+        "enigma soul",
+        "谜之灵魂"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])enigma souls(?![a-z0-9_]))|(?:(?<![a-z0-9_])enigma soul(?![a-z0-9_]))|(?:谜之灵魂)"
+    },
+    {
+      "name": "Mountaintop",
+      "category": "rift",
+      "aliases": [
+        "mountaintop",
+        "山顶区域"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mountaintop(?![a-z0-9_]))|(?:山顶区域)"
+    },
+    {
+      "name": "金币",
+      "category": "economy",
+      "aliases": [
+        "coins",
+        "coin",
+        "金币"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])coins(?![a-z0-9_]))|(?:(?<![a-z0-9_])coin(?![a-z0-9_]))|(?:金币)"
+    },
+    {
+      "name": "Bazaar",
+      "category": "economy",
+      "aliases": [
+        "bazaar",
+        "bazzar",
+        "交易所",
+        "bz"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bazaar(?![a-z0-9_]))|(?:(?<![a-z0-9_])bazzar(?![a-z0-9_]))|(?:交易所)|(?:(?<![a-z0-9_])bz(?![a-z0-9_]))"
+    },
+    {
+      "name": "Auction House",
+      "category": "economy",
+      "aliases": [
+        "auction house",
+        "auction",
+        "拍卖行",
+        "ah",
+        "拍卖"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])auction house(?![a-z0-9_]))|(?:(?<![a-z0-9_])auction(?![a-z0-9_]))|(?:拍卖行)|(?:(?<![a-z0-9_])ah(?![a-z0-9_]))|(?:拍卖)"
+    },
+    {
+      "name": "BIN",
+      "category": "economy",
+      "aliases": [
+        "bin auction",
+        "lowest bin",
+        "lbin",
+        "一口价"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bin auction(?![a-z0-9_]))|(?:(?<![a-z0-9_])lowest bin(?![a-z0-9_]))|(?:(?<![a-z0-9_])lbin(?![a-z0-9_]))|(?:一口价)"
+    },
+    {
+      "name": "Flip",
+      "category": "economy",
+      "aliases": [
+        "flipping",
+        "flip",
+        "倒卖",
+        "囤货",
+        "炒价"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])flipping(?![a-z0-9_]))|(?:(?<![a-z0-9_])flip(?![a-z0-9_]))|(?:倒卖)|(?:囤货)|(?:炒价)"
+    },
+    {
+      "name": "物价",
+      "category": "economy",
+      "aliases": [
+        "prices",
+        "price",
+        "多少钱",
+        "价格",
+        "物价",
+        "报价"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])prices(?![a-z0-9_]))|(?:(?<![a-z0-9_])price(?![a-z0-9_]))|(?:多少钱)|(?:价格)|(?:物价)|(?:报价)"
+    },
+    {
+      "name": "利润",
+      "category": "economy",
+      "aliases": [
+        "profits",
+        "profit",
+        "利润",
+        "盈亏"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])profits(?![a-z0-9_]))|(?:(?<![a-z0-9_])profit(?![a-z0-9_]))|(?:利润)|(?:盈亏)"
+    },
+    {
+      "name": "时薪收益",
+      "category": "economy",
+      "aliases": [
+        "money making",
+        "每小时收益",
+        "赚钱方法",
+        "时薪"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])money making(?![a-z0-9_]))|(?:每小时收益)|(?:赚钱方法)|(?:时薪)"
+    },
+    {
+      "name": "交易",
+      "category": "economy",
+      "aliases": [
+        "trading",
+        "trade",
+        "交易",
+        "出售",
+        "收购"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])trading(?![a-z0-9_]))|(?:(?<![a-z0-9_])trade(?![a-z0-9_]))|(?:交易)|(?:出售)|(?:收购)"
+    },
+    {
+      "name": "税费",
+      "category": "economy",
+      "aliases": [
+        "auction tax",
+        "bazaar tax",
+        "手续费",
+        "交易税"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])auction tax(?![a-z0-9_]))|(?:(?<![a-z0-9_])bazaar tax(?![a-z0-9_]))|(?:手续费)|(?:交易税)"
+    },
+    {
+      "name": "Booster Cookie",
+      "category": "economy",
+      "aliases": [
+        "booster cookie",
+        "cookies",
+        "cookie",
+        "饼干"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])booster cookie(?![a-z0-9_]))|(?:(?<![a-z0-9_])cookies(?![a-z0-9_]))|(?:(?<![a-z0-9_])cookie(?![a-z0-9_]))|(?:饼干)"
+    },
+    {
+      "name": "Bits",
+      "category": "economy",
+      "aliases": [
+        "bits",
+        "比特"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bits(?![a-z0-9_]))|(?:比特)"
+    },
+    {
+      "name": "Gems",
+      "category": "economy",
+      "aliases": [
+        "skyblock gems",
+        "宝石点券"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skyblock gems(?![a-z0-9_]))|(?:宝石点券)"
+    },
+    {
+      "name": "Bank",
+      "category": "economy",
+      "aliases": [
+        "bank",
+        "银行"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bank(?![a-z0-9_]))|(?:银行)"
+    },
+    {
+      "name": "Buy Order",
+      "category": "economy",
+      "aliases": [
+        "buy order",
+        "买单"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])buy order(?![a-z0-9_]))|(?:买单)"
+    },
+    {
+      "name": "Sell Offer",
+      "category": "economy",
+      "aliases": [
+        "sell offer",
+        "sell order",
+        "卖单"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sell offer(?![a-z0-9_]))|(?:(?<![a-z0-9_])sell order(?![a-z0-9_]))|(?:卖单)"
+    },
+    {
+      "name": "AutoBuy",
+      "category": "economy",
+      "aliases": [
+        "autobuy",
+        "自动抢购"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])autobuy(?![a-z0-9_]))|(?:自动抢购)"
+    },
+    {
+      "name": "RMT",
+      "category": "economy",
+      "aliases": [
+        "irl trading",
+        "现实交易",
+        "线下交易",
+        "rmt"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])irl trading(?![a-z0-9_]))|(?:现实交易)|(?:线下交易)|(?:(?<![a-z0-9_])rmt(?![a-z0-9_]))"
+    },
+    {
+      "name": "代充代购",
+      "category": "economy",
+      "aliases": [
+        "折代购",
+        "代充",
+        "代购"
+      ],
+      "context": "",
+      "pattern": "(?:折代购)|(?:代充)|(?:代购)"
+    },
+    {
+      "name": "买卖账号",
+      "category": "economy",
+      "aliases": [
+        "出号",
+        "收号",
+        "卖号",
+        "买号",
+        "白号",
+        "黑号"
+      ],
+      "context": "",
+      "pattern": "(?:出号)|(?:收号)|(?:卖号)|(?:买号)|(?:白号)|(?:黑号)"
+    },
+    {
+      "name": "质保",
+      "category": "economy",
+      "aliases": [
+        "质保",
+        "担保",
+        "中介"
+      ],
+      "context": "",
+      "pattern": "(?:质保)|(?:担保)|(?:中介)"
+    },
+    {
+      "name": "Shen’s Auction",
+      "category": "economy",
+      "aliases": [
+        "shen's auction",
+        "shens auction",
+        "沈的拍卖"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])shen's auction(?![a-z0-9_]))|(?:(?<![a-z0-9_])shens auction(?![a-z0-9_]))|(?:沈的拍卖)"
+    },
+    {
+      "name": "SkyBlock 等级",
+      "category": "progress",
+      "aliases": [
+        "skyblock level",
+        "sb level",
+        "天块等级"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skyblock level(?![a-z0-9_]))|(?:(?<![a-z0-9_])sb level(?![a-z0-9_]))|(?:天块等级)"
+    },
+    {
+      "name": "Skills",
+      "category": "progress",
+      "aliases": [
+        "skills",
+        "skill",
+        "技能"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skills(?![a-z0-9_]))|(?:(?<![a-z0-9_])skill(?![a-z0-9_]))|(?:技能)"
+    },
+    {
+      "name": "Skill Average",
+      "category": "progress",
+      "aliases": [
+        "skill average",
+        "技能平均"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skill average(?![a-z0-9_]))|(?:技能平均)"
+    },
+    {
+      "name": "Collection",
+      "category": "progress",
+      "aliases": [
+        "collections",
+        "collection",
+        "收集等级"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])collections(?![a-z0-9_]))|(?:(?<![a-z0-9_])collection(?![a-z0-9_]))|(?:收集等级)"
+    },
+    {
+      "name": "Bestiary",
+      "category": "progress",
+      "aliases": [
+        "bestiary",
+        "怪物图鉴"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bestiary(?![a-z0-9_]))|(?:怪物图鉴)"
+    },
+    {
+      "name": "Fairy Souls",
+      "category": "progress",
+      "aliases": [
+        "fairy souls",
+        "fairy soul",
+        "仙女灵魂"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fairy souls(?![a-z0-9_]))|(?:(?<![a-z0-9_])fairy soul(?![a-z0-9_]))|(?:仙女灵魂)"
+    },
+    {
+      "name": "Minion",
+      "category": "progress",
+      "aliases": [
+        "minions",
+        "minion",
+        "小人",
+        "仆从"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])minions(?![a-z0-9_]))|(?:(?<![a-z0-9_])minion(?![a-z0-9_]))|(?:小人)|(?:仆从)"
+    },
+    {
+      "name": "Minion Slots",
+      "category": "progress",
+      "aliases": [
+        "minion slots",
+        "minion slot",
+        "小人槽"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])minion slots(?![a-z0-9_]))|(?:(?<![a-z0-9_])minion slot(?![a-z0-9_]))|(?:小人槽)"
+    },
+    {
+      "name": "Inferno Minion",
+      "category": "progress",
+      "aliases": [
+        "inferno minion",
+        "烈焰小人"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])inferno minion(?![a-z0-9_]))|(?:烈焰小人)"
+    },
+    {
+      "name": "Slime Minion",
+      "category": "progress",
+      "aliases": [
+        "slime minion",
+        "史莱姆小人"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])slime minion(?![a-z0-9_]))|(?:史莱姆小人)"
+    },
+    {
+      "name": "Slime AFK",
+      "category": "progress",
+      "aliases": [
+        "slime afk",
+        "挂机史莱姆"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])slime afk(?![a-z0-9_]))|(?:挂机史莱姆)"
+    },
+    {
+      "name": "Combat",
+      "category": "progress",
+      "aliases": [
+        "combat",
+        "战斗技能"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])combat(?![a-z0-9_]))|(?:战斗技能)"
+    },
+    {
+      "name": "Alchemy",
+      "category": "progress",
+      "aliases": [
+        "alchemy",
+        "炼药"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])alchemy(?![a-z0-9_]))|(?:炼药)"
+    },
+    {
+      "name": "Carpentry",
+      "category": "progress",
+      "aliases": [
+        "carpentry",
+        "木工"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])carpentry(?![a-z0-9_]))|(?:木工)"
+    },
+    {
+      "name": "Taming",
+      "category": "progress",
+      "aliases": [
+        "taming",
+        "驯兽"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])taming(?![a-z0-9_]))|(?:驯兽)"
+    },
+    {
+      "name": "Social Skill",
+      "category": "progress",
+      "aliases": [
+        "social skill",
+        "社交等级"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])social skill(?![a-z0-9_]))|(?:社交等级)"
+    },
+    {
+      "name": "Dungeon Essence",
+      "category": "progress",
+      "aliases": [
+        "wither essence",
+        "dragon essence",
+        "凋零精华",
+        "龙精华"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wither essence(?![a-z0-9_]))|(?:(?<![a-z0-9_])dragon essence(?![a-z0-9_]))|(?:凋零精华)|(?:龙精华)"
+    },
+    {
+      "name": "RNG",
+      "category": "progress",
+      "aliases": [
+        "drops",
+        "drop",
+        "rng",
+        "掉落",
+        "爆率",
+        "掉率"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])drops(?![a-z0-9_]))|(?:(?<![a-z0-9_])drop(?![a-z0-9_]))|(?:(?<![a-z0-9_])rng(?![a-z0-9_]))|(?:掉落)|(?:爆率)|(?:掉率)"
+    },
+    {
+      "name": "RNG Meter",
+      "category": "progress",
+      "aliases": [
+        "rng meter",
+        "rng进度"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rng meter(?![a-z0-9_]))|(?:rng进度)"
+    },
+    {
+      "name": "Progression",
+      "category": "progress",
+      "aliases": [
+        "progression",
+        "游戏进度",
+        "发育路线"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])progression(?![a-z0-9_]))|(?:游戏进度)|(?:发育路线)"
+    },
+    {
+      "name": "Rift Transferrable",
+      "category": "progress",
+      "aliases": [
+        "rift transferable",
+        "裂隙转移"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rift transferable(?![a-z0-9_]))|(?:裂隙转移)"
+    },
+    {
+      "name": "Bingo",
+      "category": "event",
+      "aliases": [
+        "bingo",
+        "宾果"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bingo(?![a-z0-9_]))|(?:宾果)"
+    },
+    {
+      "name": "Jerry",
+      "category": "event",
+      "aliases": [
+        "jerry",
+        "杰瑞"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])jerry(?![a-z0-9_]))|(?:杰瑞)"
+    },
+    {
+      "name": "Diana",
+      "category": "event",
+      "aliases": [
+        "diana",
+        "戴安娜"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])diana(?![a-z0-9_]))|(?:戴安娜)"
+    },
+    {
+      "name": "Derpy",
+      "category": "event",
+      "aliases": [
+        "derpy",
+        "德皮"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])derpy(?![a-z0-9_]))|(?:德皮)"
+    },
+    {
+      "name": "Cole",
+      "category": "event",
+      "aliases": [
+        "cole",
+        "科尔"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])cole(?![a-z0-9_]))|(?:科尔)"
+    },
+    {
+      "name": "Marina",
+      "category": "event",
+      "aliases": [
+        "marina",
+        "玛丽娜"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])marina(?![a-z0-9_]))|(?:玛丽娜)"
+    },
+    {
+      "name": "Paul",
+      "category": "event",
+      "aliases": [
+        "paul",
+        "保罗"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])paul(?![a-z0-9_]))|(?:保罗)"
+    },
+    {
+      "name": "Aatrox",
+      "category": "event",
+      "aliases": [
+        "aatrox",
+        "亚托克斯"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])aatrox(?![a-z0-9_]))|(?:亚托克斯)"
+    },
+    {
+      "name": "Scorpius",
+      "category": "event",
+      "aliases": [
+        "scorpius",
+        "天蝎市长"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])scorpius(?![a-z0-9_]))|(?:天蝎市长)"
+    },
+    {
+      "name": "Finnegan",
+      "category": "event",
+      "aliases": [
+        "finnegan",
+        "芬尼根"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])finnegan(?![a-z0-9_]))|(?:芬尼根)"
+    },
+    {
+      "name": "Mayor",
+      "category": "event",
+      "aliases": [
+        "mayors",
+        "mayor",
+        "市长选举",
+        "市长"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mayors(?![a-z0-9_]))|(?:(?<![a-z0-9_])mayor(?![a-z0-9_]))|(?:市长选举)|(?:市长)"
+    },
+    {
+      "name": "Mythological Ritual",
+      "category": "event",
+      "aliases": [
+        "mythological ritual",
+        "神话仪式",
+        "挖狮鹫"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mythological ritual(?![a-z0-9_]))|(?:神话仪式)|(?:挖狮鹫)"
+    },
+    {
+      "name": "Spooky Festival",
+      "category": "event",
+      "aliases": [
+        "spooky festival",
+        "spooky",
+        "恐怖节",
+        "万圣节"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])spooky festival(?![a-z0-9_]))|(?:(?<![a-z0-9_])spooky(?![a-z0-9_]))|(?:恐怖节)|(?:万圣节)"
+    },
+    {
+      "name": "Jerry's Workshop",
+      "category": "event",
+      "aliases": [
+        "jerry's workshop",
+        "jerry workshop",
+        "杰瑞工坊"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])jerry's workshop(?![a-z0-9_]))|(?:(?<![a-z0-9_])jerry workshop(?![a-z0-9_]))|(?:杰瑞工坊)"
+    },
+    {
+      "name": "Season of Jerry",
+      "category": "event",
+      "aliases": [
+        "season of jerry",
+        "杰瑞季"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])season of jerry(?![a-z0-9_]))|(?:杰瑞季)"
+    },
+    {
+      "name": "Mining Fiesta",
+      "category": "event",
+      "aliases": [
+        "mining fiesta",
+        "挖矿狂欢"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mining fiesta(?![a-z0-9_]))|(?:挖矿狂欢)"
+    },
+    {
+      "name": "周年庆",
+      "category": "event",
+      "aliases": [
+        "anniversary",
+        "周年庆"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])anniversary(?![a-z0-9_]))|(?:周年庆)"
+    },
+    {
+      "name": "Fire Sale",
+      "category": "event",
+      "aliases": [
+        "fire sale",
+        "限时皮肤"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fire sale(?![a-z0-9_]))|(?:限时皮肤)"
+    },
+    {
+      "name": "更新公告",
+      "category": "event",
+      "aliases": [
+        "patch notes",
+        "updates",
+        "update",
+        "更新公告",
+        "版本更新"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])patch notes(?![a-z0-9_]))|(?:(?<![a-z0-9_])updates(?![a-z0-9_]))|(?:(?<![a-z0-9_])update(?![a-z0-9_]))|(?:更新公告)|(?:版本更新)"
+    },
+    {
+      "name": "Alpha",
+      "category": "event",
+      "aliases": [
+        "alpha",
+        "测试服"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])alpha(?![a-z0-9_]))|(?:测试服)"
+    },
+    {
+      "name": "Buff / Nerf",
+      "category": "event",
+      "aliases": [
+        "nerfed",
+        "buffs",
+        "buff",
+        "nerf",
+        "削弱",
+        "加强"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])nerfed(?![a-z0-9_]))|(?:(?<![a-z0-9_])buffs(?![a-z0-9_]))|(?:(?<![a-z0-9_])buff(?![a-z0-9_]))|(?:(?<![a-z0-9_])nerf(?![a-z0-9_]))|(?:削弱)|(?:加强)"
+    },
+    {
+      "name": "Balancing",
+      "category": "event",
+      "aliases": [
+        "balancing",
+        "平衡改动"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])balancing(?![a-z0-9_]))|(?:平衡改动)"
+    },
+    {
+      "name": "模组",
+      "category": "mods",
+      "aliases": [
+        "mods",
+        "mod",
+        "模组"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])mods(?![a-z0-9_]))|(?:(?<![a-z0-9_])mod(?![a-z0-9_]))|(?:模组)"
+    },
+    {
+      "name": "NEU",
+      "category": "mods",
+      "aliases": [
+        "not enough updates",
+        "neu"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])not enough updates(?![a-z0-9_]))|(?:(?<![a-z0-9_])neu(?![a-z0-9_]))"
+    },
+    {
+      "name": "Skytils",
+      "category": "mods",
+      "aliases": [
+        "skytils"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skytils(?![a-z0-9_]))"
+    },
+    {
+      "name": "SkyHanni",
+      "category": "mods",
+      "aliases": [
+        "skyhanni"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skyhanni(?![a-z0-9_]))"
+    },
+    {
+      "name": "SBE",
+      "category": "mods",
+      "aliases": [
+        "skyblock extras",
+        "sbe"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skyblock extras(?![a-z0-9_]))|(?:(?<![a-z0-9_])sbe(?![a-z0-9_]))"
+    },
+    {
+      "name": "Soopy",
+      "category": "mods",
+      "aliases": [
+        "soopyv2",
+        "soopy"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])soopyv2(?![a-z0-9_]))|(?:(?<![a-z0-9_])soopy(?![a-z0-9_]))"
+    },
+    {
+      "name": "Skyblocker",
+      "category": "mods",
+      "aliases": [
+        "skyblocker"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skyblocker(?![a-z0-9_]))"
+    },
+    {
+      "name": "Dungeon Rooms",
+      "category": "mods",
+      "aliases": [
+        "dungeon rooms",
+        "dungeonrooms"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])dungeon rooms(?![a-z0-9_]))|(?:(?<![a-z0-9_])dungeonrooms(?![a-z0-9_]))"
+    },
+    {
+      "name": "SkyGuide",
+      "category": "mods",
+      "aliases": [
+        "skyguide"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])skyguide(?![a-z0-9_]))"
+    },
+    {
+      "name": "ChatTriggers",
+      "category": "mods",
+      "aliases": [
+        "chattriggers"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])chattriggers(?![a-z0-9_]))"
+    },
+    {
+      "name": "Forge",
+      "category": "mods",
+      "aliases": [
+        "forge"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])forge(?![a-z0-9_]))"
+    },
+    {
+      "name": "Fabric",
+      "category": "mods",
+      "aliases": [
+        "fabric"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fabric(?![a-z0-9_]))"
+    },
+    {
+      "name": "Badlion",
+      "category": "mods",
+      "aliases": [
+        "badlion",
+        "blc"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])badlion(?![a-z0-9_]))|(?:(?<![a-z0-9_])blc(?![a-z0-9_]))"
+    },
+    {
+      "name": "Lunar",
+      "category": "mods",
+      "aliases": [
+        "lunar client",
+        "lunar"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])lunar client(?![a-z0-9_]))|(?:(?<![a-z0-9_])lunar(?![a-z0-9_]))"
+    },
+    {
+      "name": "OptiFine",
+      "category": "mods",
+      "aliases": [
+        "optifine"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])optifine(?![a-z0-9_]))"
+    },
+    {
+      "name": "Sodium",
+      "category": "mods",
+      "aliases": [
+        "sodium"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sodium(?![a-z0-9_]))"
+    },
+    {
+      "name": "Patcher",
+      "category": "mods",
+      "aliases": [
+        "patcher"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])patcher(?![a-z0-9_]))"
+    },
+    {
+      "name": "材质光影",
+      "category": "mods",
+      "aliases": [
+        "resource pack",
+        "texture pack",
+        "shaders",
+        "shader",
+        "材质包",
+        "光影"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])resource pack(?![a-z0-9_]))|(?:(?<![a-z0-9_])texture pack(?![a-z0-9_]))|(?:(?<![a-z0-9_])shaders(?![a-z0-9_]))|(?:(?<![a-z0-9_])shader(?![a-z0-9_]))|(?:材质包)|(?:光影)"
+    },
+    {
+      "name": "Waypoint",
+      "category": "mods",
+      "aliases": [
+        "waypoints",
+        "waypoint",
+        "路径点",
+        "航点"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])waypoints(?![a-z0-9_]))|(?:(?<![a-z0-9_])waypoint(?![a-z0-9_]))|(?:路径点)|(?:航点)"
+    },
+    {
+      "name": "Macro",
+      "category": "mods",
+      "aliases": [
+        "macros",
+        "macro",
+        "自动脚本",
+        "宏脚本"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])macros(?![a-z0-9_]))|(?:(?<![a-z0-9_])macro(?![a-z0-9_]))|(?:自动脚本)|(?:宏脚本)"
+    },
+    {
+      "name": "机器人命令",
+      "category": "mods",
+      "aliases": [
+        "r:(?:^|\\s)/(?:nw|skb|hyp|pf|networth|skyblock)(?![a-z0-9_])",
+        "查净资产"
+      ],
+      "context": "",
+      "pattern": "(?:(?:^|\\s)/(?:nw|skb|hyp|pf|networth|skyblock)(?![a-z0-9_]))|(?:查净资产)"
+    },
+    {
+      "name": "Wiki 攻略站",
+      "category": "mods",
+      "aliases": [
+        "wiki",
+        "维基"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wiki(?![a-z0-9_]))|(?:维基)"
+    },
+    {
+      "name": "Ban",
+      "category": "security",
+      "aliases": [
+        "banned",
+        "ban",
+        "封号",
+        "封禁"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])banned(?![a-z0-9_]))|(?:(?<![a-z0-9_])ban(?![a-z0-9_]))|(?:封号)|(?:封禁)"
+    },
+    {
+      "name": "Wipe",
+      "category": "security",
+      "aliases": [
+        "wiped",
+        "wipe",
+        "删档",
+        "清档"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wiped(?![a-z0-9_]))|(?:(?<![a-z0-9_])wipe(?![a-z0-9_]))|(?:删档)|(?:清档)"
+    },
+    {
+      "name": "RAT",
+      "category": "security",
+      "aliases": [
+        "ratted",
+        "rat",
+        "盗号",
+        "木马"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])ratted(?![a-z0-9_]))|(?:(?<![a-z0-9_])rat(?![a-z0-9_]))|(?:盗号)|(?:木马)"
+    },
+    {
+      "name": "Dupe",
+      "category": "security",
+      "aliases": [
+        "duping",
+        "dupe",
+        "复制物品",
+        "刷物品"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])duping(?![a-z0-9_]))|(?:(?<![a-z0-9_])dupe(?![a-z0-9_]))|(?:复制物品)|(?:刷物品)"
+    },
+    {
+      "name": "漏洞",
+      "category": "security",
+      "aliases": [
+        "exploit",
+        "bugs",
+        "bug",
+        "漏洞"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])exploit(?![a-z0-9_]))|(?:(?<![a-z0-9_])bugs(?![a-z0-9_]))|(?:(?<![a-z0-9_])bug(?![a-z0-9_]))|(?:漏洞)"
+    },
+    {
+      "name": "外挂",
+      "category": "security",
+      "aliases": [
+        "cheating",
+        "cheats",
+        "cheat",
+        "外挂",
+        "开挂"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])cheating(?![a-z0-9_]))|(?:(?<![a-z0-9_])cheats(?![a-z0-9_]))|(?:(?<![a-z0-9_])cheat(?![a-z0-9_]))|(?:外挂)|(?:开挂)"
+    },
+    {
+      "name": "诈骗",
+      "category": "security",
+      "aliases": [
+        "scammer",
+        "scam",
+        "诈骗",
+        "骗子"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])scammer(?![a-z0-9_]))|(?:(?<![a-z0-9_])scam(?![a-z0-9_]))|(?:诈骗)|(?:骗子)"
+    },
+    {
+      "name": "Token",
+      "category": "security",
+      "aliases": [
+        "session",
+        "token",
+        "会话令牌",
+        "令牌"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])session(?![a-z0-9_]))|(?:(?<![a-z0-9_])token(?![a-z0-9_]))|(?:会话令牌)|(?:令牌)"
+    },
+    {
+      "name": "MFA",
+      "category": "security",
+      "aliases": [
+        "双重验证",
+        "mfa",
+        "2fa"
+      ],
+      "context": "",
+      "pattern": "(?:双重验证)|(?:(?<![a-z0-9_])mfa(?![a-z0-9_]))|(?:(?<![a-z0-9_])2fa(?![a-z0-9_]))"
+    },
+    {
+      "name": "OAuth",
+      "category": "security",
+      "aliases": [
+        "oauth",
+        "授权登录"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])oauth(?![a-z0-9_]))|(?:授权登录)"
+    },
+    {
+      "name": "申诉",
+      "category": "security",
+      "aliases": [
+        "appeal",
+        "申诉",
+        "解封"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])appeal(?![a-z0-9_]))|(?:申诉)|(?:解封)"
+    },
+    {
+      "name": "Watchdog",
+      "category": "security",
+      "aliases": [
+        "watchdog",
+        "反作弊"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])watchdog(?![a-z0-9_]))|(?:反作弊)"
+    },
+    {
+      "name": "钓鱼网站",
+      "category": "security",
+      "aliases": [
+        "phishing",
+        "钓鱼网站",
+        "钓鱼链接"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])phishing(?![a-z0-9_]))|(?:钓鱼网站)|(?:钓鱼链接)"
+    },
+    {
+      "name": "微软账号",
+      "category": "security",
+      "aliases": [
+        "microsoft account",
+        "微软账号",
+        "微软账户"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])microsoft account(?![a-z0-9_]))|(?:微软账号)|(?:微软账户)"
+    },
+    {
+      "name": "黑卡",
+      "category": "security",
+      "aliases": [
+        "黑卡",
+        "盗刷"
+      ],
+      "context": "",
+      "pattern": "(?:黑卡)|(?:盗刷)"
+    },
+    {
+      "name": "开盒",
+      "category": "security",
+      "aliases": [
+        "人肉搜索",
+        "开盒",
+        "开合"
+      ],
+      "context": "",
+      "pattern": "(?:人肉搜索)|(?:开盒)|(?:开合)"
+    },
+    {
+      "name": "延迟",
+      "category": "network",
+      "aliases": [
+        "latency",
+        "ping",
+        "延迟"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])latency(?![a-z0-9_]))|(?:(?<![a-z0-9_])ping(?![a-z0-9_]))|(?:延迟)"
+    },
+    {
+      "name": "卡顿",
+      "category": "network",
+      "aliases": [
+        "laggy",
+        "lag",
+        "卡顿"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])laggy(?![a-z0-9_]))|(?:(?<![a-z0-9_])lag(?![a-z0-9_]))|(?:卡顿)"
+    },
+    {
+      "name": "断线",
+      "category": "network",
+      "aliases": [
+        "disconnect",
+        "timeout",
+        "连不上",
+        "掉线",
+        "断线"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])disconnect(?![a-z0-9_]))|(?:(?<![a-z0-9_])timeout(?![a-z0-9_]))|(?:连不上)|(?:掉线)|(?:断线)"
+    },
+    {
+      "name": "维护",
+      "category": "network",
+      "aliases": [
+        "maintenance",
+        "服务器维护",
+        "停服"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])maintenance(?![a-z0-9_]))|(?:服务器维护)|(?:停服)"
+    },
+    {
+      "name": "加速器",
+      "category": "network",
+      "aliases": [
+        "代理节点",
+        "加速节点",
+        "加速器"
+      ],
+      "context": "",
+      "pattern": "(?:代理节点)|(?:加速节点)|(?:加速器)"
+    },
+    {
+      "name": "FPS",
+      "category": "network",
+      "aliases": [
+        "fps",
+        "帧数",
+        "帧率"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])fps(?![a-z0-9_]))|(?:帧数)|(?:帧率)"
+    },
+    {
+      "name": "TPS",
+      "category": "network",
+      "aliases": [
+        "tps"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])tps(?![a-z0-9_]))"
+    },
+    {
+      "name": "服务器",
+      "category": "network",
+      "aliases": [
+        "servers",
+        "server",
+        "服务器",
+        "伺服器"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])servers(?![a-z0-9_]))|(?:(?<![a-z0-9_])server(?![a-z0-9_]))|(?:服务器)|(?:伺服器)"
+    },
+    {
+      "name": "排队",
+      "category": "network",
+      "aliases": [
+        "server queue",
+        "服务器排队"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])server queue(?![a-z0-9_]))|(?:服务器排队)"
+    },
+    {
+      "name": "公会",
+      "category": "social",
+      "aliases": [
+        "guilds",
+        "guild",
+        "公会"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])guilds(?![a-z0-9_]))|(?:(?<![a-z0-9_])guild(?![a-z0-9_]))|(?:公会)"
+    },
+    {
+      "name": "组队",
+      "category": "social",
+      "aliases": [
+        "party",
+        "组队",
+        "组车",
+        "开车",
+        "缺人"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])party(?![a-z0-9_]))|(?:组队)|(?:组车)|(?:开车)|(?:缺人)"
+    },
+    {
+      "name": "找队友",
+      "category": "social",
+      "aliases": [
+        "有人来吗",
+        "lfg",
+        "lfm",
+        "找队友",
+        "来人"
+      ],
+      "context": "",
+      "pattern": "(?:有人来吗)|(?:(?<![a-z0-9_])lfg(?![a-z0-9_]))|(?:(?<![a-z0-9_])lfm(?![a-z0-9_]))|(?:找队友)|(?:来人)"
+    },
+    {
+      "name": "固定队",
+      "category": "social",
+      "aliases": [
+        "固定队",
+        "固定车"
+      ],
+      "context": "",
+      "pattern": "(?:固定队)|(?:固定车)"
+    },
+    {
+      "name": "踢人",
+      "category": "social",
+      "aliases": [
+        "party kick",
+        "踢队",
+        "踢人"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])party kick(?![a-z0-9_]))|(?:踢队)|(?:踢人)"
+    },
+    {
+      "name": "独狼",
+      "category": "social",
+      "aliases": [
+        "solo",
+        "独狼"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])solo(?![a-z0-9_]))|(?:独狼)"
+    },
+    {
+      "name": "退坑回坑",
+      "category": "social",
+      "aliases": [
+        "退坑",
+        "回坑",
+        "入坑"
+      ],
+      "context": "",
+      "pattern": "(?:退坑)|(?:回坑)|(?:入坑)"
+    },
+    {
+      "name": "萌新",
+      "category": "social",
+      "aliases": [
+        "newbie",
+        "萌新",
+        "新手"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])newbie(?![a-z0-9_]))|(?:萌新)|(?:新手)"
+    },
+    {
+      "name": "Admin",
+      "category": "social",
+      "aliases": [
+        "admins",
+        "admin",
+        "管理员"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])admins(?![a-z0-9_]))|(?:(?<![a-z0-9_])admin(?![a-z0-9_]))|(?:管理员)"
+    },
+    {
+      "name": "Rank",
+      "category": "social",
+      "aliases": [
+        "rank",
+        "会员等级",
+        "会员折扣"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])rank(?![a-z0-9_]))|(?:会员等级)|(?:会员折扣)"
+    },
+    {
+      "name": "搬运分享",
+      "category": "social",
+      "aliases": [
+        "搬运",
+        "转载",
+        "分享"
+      ],
+      "context": "",
+      "pattern": "(?:搬运)|(?:转载)|(?:分享)"
+    },
+    {
+      "name": "直播录屏",
+      "category": "social",
+      "aliases": [
+        "直播",
+        "录屏",
+        "录播"
+      ],
+      "context": "",
+      "pattern": "(?:直播)|(?:录屏)|(?:录播)"
+    },
+    {
+      "name": "群内事务",
+      "category": "social",
+      "aliases": [
+        "群公告",
+        "群规",
+        "禁言",
+        "入群",
+        "退群",
+        "群主"
+      ],
+      "context": "",
+      "pattern": "(?:群公告)|(?:群规)|(?:禁言)|(?:入群)|(?:退群)|(?:群主)"
+    },
+    {
+      "name": "签到机器人",
+      "category": "social",
+      "aliases": [
+        "签到成功",
+        "今日运势",
+        "签到奖励",
+        "jrrp"
+      ],
+      "context": "",
+      "pattern": "(?:签到成功)|(?:今日运势)|(?:签到奖励)|(?:(?<![a-z0-9_])jrrp(?![a-z0-9_]))"
+    },
+    {
+      "name": "求助",
+      "category": "help",
+      "aliases": [
+        "help",
+        "问一下",
+        "求助",
+        "请问",
+        "求教"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])help(?![a-z0-9_]))|(?:问一下)|(?:求助)|(?:请问)|(?:求教)"
+    },
+    {
+      "name": "攻略",
+      "category": "help",
+      "aliases": [
+        "tutorial",
+        "guide",
+        "攻略",
+        "教程"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])tutorial(?![a-z0-9_]))|(?:(?<![a-z0-9_])guide(?![a-z0-9_]))|(?:攻略)|(?:教程)"
+    },
+    {
+      "name": "推荐配装",
+      "category": "help",
+      "aliases": [
+        "配装推荐",
+        "怎么配装",
+        "装备推荐"
+      ],
+      "context": "",
+      "pattern": "(?:配装推荐)|(?:怎么配装)|(?:装备推荐)"
+    },
+    {
+      "name": "路线规划",
+      "category": "help",
+      "aliases": [
+        "发育路线",
+        "升级路线",
+        "怎么提升"
+      ],
+      "context": "",
+      "pattern": "(?:发育路线)|(?:升级路线)|(?:怎么提升)"
+    },
+    {
+      "name": "机制讨论",
+      "category": "help",
+      "aliases": [
+        "怎么触发",
+        "计算公式",
+        "机制"
+      ],
+      "context": "",
+      "pattern": "(?:怎么触发)|(?:计算公式)|(?:机制)"
+    },
+    {
+      "name": "配置排错",
+      "category": "help",
+      "aliases": [
+        "装不上",
+        "报错",
+        "闪退",
+        "崩溃"
+      ],
+      "context": "",
+      "pattern": "(?:装不上)|(?:报错)|(?:闪退)|(?:崩溃)"
+    },
+    {
+      "name": "装备测评",
+      "category": "help",
+      "aliases": [
+        "测试伤害",
+        "测评",
+        "实测"
+      ],
+      "context": "",
+      "pattern": "(?:测试伤害)|(?:测评)|(?:实测)"
+    },
+    {
+      "name": "日常闲聊",
+      "category": "daily",
+      "aliases": [
+        "吃饭",
+        "睡觉",
+        "起床",
+        "晚安",
+        "早安",
+        "下班",
+        "上班"
+      ],
+      "context": "",
+      "pattern": "(?:吃饭)|(?:睡觉)|(?:起床)|(?:晚安)|(?:早安)|(?:下班)|(?:上班)"
+    },
+    {
+      "name": "学习考试",
+      "category": "daily",
+      "aliases": [
+        "考试",
+        "作业",
+        "上课",
+        "高考",
+        "考研",
+        "大学",
+        "学校"
+      ],
+      "context": "",
+      "pattern": "(?:考试)|(?:作业)|(?:上课)|(?:高考)|(?:考研)|(?:大学)|(?:学校)"
+    },
+    {
+      "name": "情绪吐槽",
+      "category": "daily",
+      "aliases": [
+        "绷不住",
+        "笑死",
+        "难绷",
+        "无语",
+        "离谱",
+        "红温",
+        "破防"
+      ],
+      "context": "",
+      "pattern": "(?:绷不住)|(?:笑死)|(?:难绷)|(?:无语)|(?:离谱)|(?:红温)|(?:破防)"
+    },
+    {
+      "name": "笑声",
+      "category": "daily",
+      "aliases": [
+        "2333",
+        "hhh",
+        "哈哈",
+        "笑了"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])2333(?![a-z0-9_]))|(?:(?<![a-z0-9_])hhh(?![a-z0-9_]))|(?:哈哈)|(?:笑了)"
+    },
+    {
+      "name": "群内玩梗",
+      "category": "daily",
+      "aliases": [
+        "典中典",
+        "抽象",
+        "乐子",
+        "整活",
+        "玩梗"
+      ],
+      "context": "",
+      "pattern": "(?:典中典)|(?:抽象)|(?:乐子)|(?:整活)|(?:玩梗)"
+    },
+    {
+      "name": "贴贴互动",
+      "category": "daily",
+      "aliases": [
+        "贴贴",
+        "可爱",
+        "老婆",
+        "老公"
+      ],
+      "context": "",
+      "pattern": "(?:贴贴)|(?:可爱)|(?:老婆)|(?:老公)"
+    },
+    {
+      "name": "争论骂战",
+      "category": "daily",
+      "aliases": [
+        "吵架",
+        "骂战",
+        "对线",
+        "互喷",
+        "傻逼"
+      ],
+      "context": "",
+      "pattern": "(?:吵架)|(?:骂战)|(?:对线)|(?:互喷)|(?:傻逼)"
+    },
+    {
+      "name": "生活消费",
+      "category": "daily",
+      "aliases": [
+        "外卖",
+        "奶茶",
+        "房租",
+        "工资"
+      ],
+      "context": "",
+      "pattern": "(?:外卖)|(?:奶茶)|(?:房租)|(?:工资)"
+    },
+    {
+      "name": "图片表情讨论",
+      "category": "daily",
+      "aliases": [
+        "表情包",
+        "动图",
+        "梗图"
+      ],
+      "context": "",
+      "pattern": "(?:表情包)|(?:动图)|(?:梗图)"
+    },
+    {
+      "name": "Wynncraft",
+      "category": "othergame",
+      "aliases": [
+        "wynncraft",
+        "wynn",
+        "温床"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])wynncraft(?![a-z0-9_]))|(?:(?<![a-z0-9_])wynn(?![a-z0-9_]))|(?:温床)"
+    },
+    {
+      "name": "Bed Wars",
+      "category": "othergame",
+      "aliases": [
+        "bed wars",
+        "bedwars",
+        "起床战争"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bed wars(?![a-z0-9_]))|(?:(?<![a-z0-9_])bedwars(?![a-z0-9_]))|(?:起床战争)"
+    },
+    {
+      "name": "SkyWars",
+      "category": "othergame",
+      "aliases": [
+        "sky wars",
+        "skywars",
+        "空岛战争"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])sky wars(?![a-z0-9_]))|(?:(?<![a-z0-9_])skywars(?![a-z0-9_]))|(?:空岛战争)"
+    },
+    {
+      "name": "Zombies",
+      "category": "othergame",
+      "aliases": [
+        "hypixel zombies",
+        "zombies",
+        "僵尸末日"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])hypixel zombies(?![a-z0-9_]))|(?:(?<![a-z0-9_])zombies(?![a-z0-9_]))|(?:僵尸末日)"
+    },
+    {
+      "name": "原神",
+      "category": "othergame",
+      "aliases": [
+        "genshin",
+        "原神"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])genshin(?![a-z0-9_]))|(?:原神)"
+    },
+    {
+      "name": "崩坏星穹铁道",
+      "category": "othergame",
+      "aliases": [
+        "星穹铁道",
+        "星铁"
+      ],
+      "context": "",
+      "pattern": "(?:星穹铁道)|(?:星铁)"
+    },
+    {
+      "name": "三角洲行动",
+      "category": "othergame",
+      "aliases": [
+        "delta force",
+        "三角洲"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])delta force(?![a-z0-9_]))|(?:三角洲)"
+    },
+    {
+      "name": "CS2",
+      "category": "othergame",
+      "aliases": [
+        "csgo",
+        "反恐精英",
+        "cs2"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])csgo(?![a-z0-9_]))|(?:反恐精英)|(?:(?<![a-z0-9_])cs2(?![a-z0-9_]))"
+    },
+    {
+      "name": "Valorant",
+      "category": "othergame",
+      "aliases": [
+        "valorant",
+        "无畏契约",
+        "瓦洛兰特"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])valorant(?![a-z0-9_]))|(?:无畏契约)|(?:瓦洛兰特)"
+    },
+    {
+      "name": "Osu",
+      "category": "othergame",
+      "aliases": [
+        "osu"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])osu(?![a-z0-9_]))"
+    },
+    {
+      "name": "Roblox",
+      "category": "othergame",
+      "aliases": [
+        "roblox",
+        "罗布乐思"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])roblox(?![a-z0-9_]))|(?:罗布乐思)"
+    },
+    {
+      "name": "AI",
+      "category": "tech",
+      "aliases": [
+        "deepseek",
+        "chatgpt",
+        "claude",
+        "gemini",
+        "人工智能",
+        "gpt"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])deepseek(?![a-z0-9_]))|(?:(?<![a-z0-9_])chatgpt(?![a-z0-9_]))|(?:(?<![a-z0-9_])claude(?![a-z0-9_]))|(?:(?<![a-z0-9_])gemini(?![a-z0-9_]))|(?:人工智能)|(?:(?<![a-z0-9_])gpt(?![a-z0-9_]))"
+    },
+    {
+      "name": "电脑硬件",
+      "category": "tech",
+      "aliases": [
+        "cpu",
+        "gpu",
+        "笔记本",
+        "显卡",
+        "内存",
+        "主板"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])cpu(?![a-z0-9_]))|(?:(?<![a-z0-9_])gpu(?![a-z0-9_]))|(?:笔记本)|(?:显卡)|(?:内存)|(?:主板)"
+    },
+    {
+      "name": "代码开发",
+      "category": "tech",
+      "aliases": [
+        "javascript",
+        "python",
+        "matlab",
+        "写代码",
+        "编程"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])javascript(?![a-z0-9_]))|(?:(?<![a-z0-9_])python(?![a-z0-9_]))|(?:(?<![a-z0-9_])matlab(?![a-z0-9_]))|(?:写代码)|(?:编程)"
+    },
+    {
+      "name": "手机系统",
+      "category": "tech",
+      "aliases": [
+        "android",
+        "苹果手机",
+        "ios",
+        "安卓"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])android(?![a-z0-9_]))|(?:苹果手机)|(?:(?<![a-z0-9_])ios(?![a-z0-9_]))|(?:安卓)"
+    },
+    {
+      "name": "网络平台",
+      "category": "tech",
+      "aliases": [
+        "bilibili",
+        "discord",
+        "youtube",
+        "哔哩哔哩",
+        "油管",
+        "抖音"
+      ],
+      "context": "",
+      "pattern": "(?:(?<![a-z0-9_])bilibili(?![a-z0-9_]))|(?:(?<![a-z0-9_])discord(?![a-z0-9_]))|(?:(?<![a-z0-9_])youtube(?![a-z0-9_]))|(?:哔哩哔哩)|(?:油管)|(?:抖音)"
+    }
+  ],
+  "topics": [
+    {
+      "id": "core",
+      "name": "游戏与档案",
+      "color": "#9fc8ff",
+      "termIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": "weapon",
+      "name": "武器与配装",
+      "color": "#ffad77",
+      "termIndices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ]
+    },
+    {
+      "id": "armor",
+      "name": "护甲与装备",
+      "color": "#f8cc6b",
+      "termIndices": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "stats",
+      "name": "属性与强化",
+      "color": "#c3e88d",
+      "termIndices": [
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ]
+    },
+    {
+      "id": "pet",
+      "name": "宠物",
+      "color": "#ff96bc",
+      "termIndices": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ]
+    },
+    {
+      "id": "dungeon",
+      "name": "地牢",
+      "color": "#bc9cff",
+      "termIndices": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187
+      ]
+    },
+    {
+      "id": "kuudra",
+      "name": "Kuudra 与绯红岛",
+      "color": "#ff956d",
+      "termIndices": [
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ]
+    },
+    {
+      "id": "slayer",
+      "name": "Slayer",
+      "color": "#ff799d",
+      "termIndices": [
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219
+      ]
+    },
+    {
+      "id": "mining",
+      "name": "挖矿",
+      "color": "#76d7e8",
+      "termIndices": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244
+      ]
+    },
+    {
+      "id": "farming",
+      "name": "农业与花园",
+      "color": "#c8db6c",
+      "termIndices": [
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265
+      ]
+    },
+    {
+      "id": "fishing",
+      "name": "钓鱼",
+      "color": "#72c4fa",
+      "termIndices": [
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284
+      ]
+    },
+    {
+      "id": "foraging",
+      "name": "伐木与狩猎",
+      "color": "#7cdbb5",
+      "termIndices": [
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297
+      ]
+    },
+    {
+      "id": "rift",
+      "name": "裂隙",
+      "color": "#c5a2ff",
+      "termIndices": [
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306
+      ]
+    },
+    {
+      "id": "economy",
+      "name": "经济与交易",
+      "color": "#f2cf7c",
+      "termIndices": [
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328
+      ]
+    },
+    {
+      "id": "progress",
+      "name": "成长与收集",
+      "color": "#a4d6cc",
+      "termIndices": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349
+      ]
+    },
+    {
+      "id": "event",
+      "name": "活动与市长",
+      "color": "#eab4ff",
+      "termIndices": [
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371
+      ]
+    },
+    {
+      "id": "mods",
+      "name": "模组与工具",
+      "color": "#96b6ff",
+      "termIndices": [
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ]
+    },
+    {
+      "id": "security",
+      "name": "账号与安全",
+      "color": "#f494a6",
+      "termIndices": [
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409
+      ]
+    },
+    {
+      "id": "network",
+      "name": "连接与性能",
+      "color": "#95cbd7",
+      "termIndices": [
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418
+      ]
+    },
+    {
+      "id": "social",
+      "name": "组队与社群",
+      "color": "#d4b5ef",
+      "termIndices": [
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432
+      ]
+    },
+    {
+      "id": "help",
+      "name": "求助与攻略",
+      "color": "#b4d594",
+      "termIndices": [
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439
+      ]
+    },
+    {
+      "id": "daily",
+      "name": "日常与情绪",
+      "color": "#e8a8ce",
+      "termIndices": [
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448
+      ]
+    },
+    {
+      "id": "othergame",
+      "name": "其他游戏",
+      "color": "#d1bda2",
+      "termIndices": [
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459
+      ]
+    },
+    {
+      "id": "tech",
+      "name": "电脑与 AI",
+      "color": "#a4b7df",
+      "termIndices": [
+        460,
+        461,
+        462,
+        463,
+        464
+      ]
+    }
+  ],
+  "categories": {
+    "core": {
+      "name": "游戏与档案",
+      "color": "#9fc8ff"
+    },
+    "weapon": {
+      "name": "武器与配装",
+      "color": "#ffad77"
+    },
+    "armor": {
+      "name": "护甲与装备",
+      "color": "#f8cc6b"
+    },
+    "stats": {
+      "name": "属性与强化",
+      "color": "#c3e88d"
+    },
+    "pet": {
+      "name": "宠物",
+      "color": "#ff96bc"
+    },
+    "dungeon": {
+      "name": "地牢",
+      "color": "#bc9cff"
+    },
+    "kuudra": {
+      "name": "Kuudra 与绯红岛",
+      "color": "#ff956d"
+    },
+    "slayer": {
+      "name": "Slayer",
+      "color": "#ff799d"
+    },
+    "mining": {
+      "name": "挖矿",
+      "color": "#76d7e8"
+    },
+    "farming": {
+      "name": "农业与花园",
+      "color": "#c8db6c"
+    },
+    "fishing": {
+      "name": "钓鱼",
+      "color": "#72c4fa"
+    },
+    "foraging": {
+      "name": "伐木与狩猎",
+      "color": "#7cdbb5"
+    },
+    "rift": {
+      "name": "裂隙",
+      "color": "#c5a2ff"
+    },
+    "economy": {
+      "name": "经济与交易",
+      "color": "#f2cf7c"
+    },
+    "progress": {
+      "name": "成长与收集",
+      "color": "#a4d6cc"
+    },
+    "event": {
+      "name": "活动与市长",
+      "color": "#eab4ff"
+    },
+    "mods": {
+      "name": "模组与工具",
+      "color": "#96b6ff"
+    },
+    "security": {
+      "name": "账号与安全",
+      "color": "#f494a6"
+    },
+    "network": {
+      "name": "连接与性能",
+      "color": "#95cbd7"
+    },
+    "social": {
+      "name": "组队与社群",
+      "color": "#d4b5ef"
+    },
+    "help": {
+      "name": "求助与攻略",
+      "color": "#b4d594"
+    },
+    "daily": {
+      "name": "日常与情绪",
+      "color": "#e8a8ce"
+    },
+    "othergame": {
+      "name": "其他游戏",
+      "color": "#d1bda2"
+    },
+    "tech": {
+      "name": "电脑与 AI",
+      "color": "#a4b7df"
+    }
+  },
+  "sources": [
+    {
+      "title": "Local corpus review: 859147 messages, English token candidates and context samples",
+      "url": ""
+    },
+    {
+      "title": "Galatea / Heart of the Forest / Hunting",
+      "url": "https://hypixelskyblock.minecraft.wiki/w/Galatea"
+    },
+    {
+      "title": "Kuudra",
+      "url": "https://hypixelskyblock.minecraft.wiki/w/Kuudra"
+    }
+  ],
+  "notes": [
+    "hyp maps to Hypixel, not Hyperion: the local corpus uses it for the server and bot commands.",
+    "Do not map player IDs, recu​rving, khcl, or short ambiguous sh/st/bs/hs to game entities.",
+    "HOTM and HOTF are distinct. Necron armor, handle and boss mentions remain lexically ambiguous.",
+    "Removed isolated 赚/亏/炒/宏/机器/合作/安全/复制 as entity aliases to limit generic substring false positives.",
+    "Short numeric tier labels and English common words remain possible false positives; this is rule matching, not a semantic classifier."
+  ]
+}

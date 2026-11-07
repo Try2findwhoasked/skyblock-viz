@@ -46,7 +46,7 @@ def main():
     html = (SOURCE/'output/matlab/index.html').read_text(encoding='utf-8')
     html, count = re.subn(r'^window\.__SB_DATA = .+$', lambda _: 'window.__SB_DATA = '+serialized, html, flags=re.M)
     assert count == 1
-    (SITE/'index.html').write_text(html, encoding='utf-8')
+    (SITE/'essence-analysis.html').write_text(html, encoding='utf-8')
     (SITE/'viz-data.json').write_text(serialized, encoding='utf-8')
     (SITE/'images/manifest.json').write_text(json.dumps(data['imageMap'], ensure_ascii=False), encoding='utf-8')
     for name in ['msgs.tsv', 'groups.tsv']:

@@ -1,17 +1,21 @@
-# SkyBlock 中文圈子 · 精华话题分析
+# SKB Observatory · 中文 SkyBlock 圈子观察站
 
-从 SnowLuma 的 MATLAB 可视化导出整理的独立静态站点。无需 Node、MATLAB、数据库或构建步骤。
+完整群聊与精华消息的双源分析网站。统一词典、分别统计，支持词云、话题占比、
+双源词频和月份对照。页面是纯静态文件，无需在线运行 MATLAB、数据库或 Node。
 
-## 部署最小集
+- `index.html`、`observatory.css`、`observatory.js`：新版统一入口与 UI。
+- `full-chat-data.json`：MATLAB 生成的两源汇总，不含原始聊天明细。
+- `corpus.html?source=chat` / `corpus.html?source=essence`：数据库与精华的完整分析档案，共用页面与词典。
+- `corpus-details.json`：全量话题共现、时间热图、4,128 条匿名样例；不包含完整数据库聊天或发送者标识。
+- `word-cloud.js`：总览和档案共用的词云绘制。
+- `analysis/full-chat-lexicon.json`：可下载词典，464 个词条、24 类话题。
+- `essence-analysis.html`、`viz-data.json`：历史精华分析与图片档案。
+- `full-chat.html`、`full-chat.js`：保留原单源分析入口。
+- `images/`、`report.md`、`msgs.tsv`、`groups.tsv`、`essence.json`：原精华内容资源和下载。
 
-- `index.html`：入口，内嵌全部样式、脚本和分析数据。
-- `images/`：页面实际引用的 4,803 个图片路径，内容去重后 4,803 张；静态图使用较小的 WebP 或原格式，保持分辨率，GIF 动画保留原文件。
-- `report.md`、`msgs.tsv`、`groups.tsv`、`viz-data.json`、`essence.json`、`images/manifest.json`：保留页面底部的六个下载入口。它们不参与页面运行。manifest 是原始抓取映射，部署图片名已去重并更新在页面数据中。
-- `.nojekyll`：GitHub Pages 直接发布静态文件。
-
-已排除 MATLAB `.mat` 中间文件、未被页面引用的图像、重复 CSV、分析图目录、抓取程序、账号配置及日志。
-
-原始引用图片共 1420.6 MiB；部署图片 671.4 MiB；站点约 686.7 MiB。静态图压缩有轻微有损，不改变原始文件。
+数据库和精华可能重叠，不能把它们相加当成去重总量。数据库使用结构化正文，
+精华使用正文＋OCR；默认只比较共同月份。词条匹配是规则统计，未命中不等于闲聊。
+重建、统计口径与词典维护见 [analysis/README.md](analysis/README.md)。
 
 ## GitHub Pages
 

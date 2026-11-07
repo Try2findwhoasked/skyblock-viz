@@ -6,6 +6,8 @@ import json
 import re
 import shutil
 import subprocess
+import sys
+import csv
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -17,7 +19,7 @@ PUBLISH = ['index.html', 'images', 'report.md', 'msgs.tsv', 'groups.tsv',
            'essence-analysis.html', 'observatory.css', 'observatory.js',
            'analysis/full-chat-lexicon.json', 'word-cloud.js',
            'corpus.html', 'corpus.js', 'corpus.css', 'corpus-details.json',
-           'essence-data.json.gz', 'essence-groups', 'essence-topics']
+           'essence-data.json.gz', 'essence-groups', 'essence-topics', 'compact.css']
 
 
 class Dependencies(HTMLParser):
@@ -76,6 +78,19 @@ def main():
         raise ValueError('Legacy page data loader is missing')
     if data != json.loads((ROOT / 'viz-data.json').read_text(encoding='utf-8')):
         raise ValueError('Downloadable visualization data differs from page data')
+    sys.path.insert(0, str(ROOT/'analysis'))
+    from bot_filter import reason, BOT_NAME
+    with (ROOT/'msgs.tsv').open(encoding='utf-8-sig', newline='') as f:
+        published_messages = list(csv.DictReader(f, delimiter='\t'))
+    if len(published_messages) != data['summary']['msgs']:
+        raise ValueError('Filtered essence counts differ from published TSV')
+    for row in published_messages:
+        if reason(row.get('analysisText') or row['text']) or BOT_NAME.search(row['senderNick']):
+            raise ValueError('Bot content remains in published essence messages')
+    for rows in data['groupSamples'].values():
+        for row in rows:
+            if reason(row.get('text','')+' '+row.get('ocr','')):
+                raise ValueError('Bot content remains in legacy samples')
     if not data.get('groups') or not data.get('topics'):
         raise ValueError('Required visualization data is empty')
     images = set(image_paths(data))
@@ -96,6 +111,12 @@ def main():
     if [g['gid'] for g in full['coverage']['groups']] != expected_groups:
         raise ValueError('Full-chat group scope differs from groups.tsv')
     groups = full['coverage']['groups']
+    for scope in [full['coverage'],full['essenceCoverage']]:
+        if scope['botFilter']['removed'] != sum(g['botExcluded'] for g in scope['groups']):
+            raise ValueError('Bot exclusion counts do not reconcile')
+        if any(g['total']+g['botExcluded'] != g['originalTotal'] for g in scope['groups']):
+            raise ValueError('Original/retained record counts differ')
+
     if full['schemaVersion'] != 2:
         raise ValueError('Unified analysis requires schema 2')
     if sum(c['messages'] for c in full['essenceCells']) != sum(g['textMessages'] for g in full['essenceCoverage']['groups']):
@@ -103,6 +124,9 @@ def main():
     lex = json.loads((ROOT / 'analysis/full-chat-lexicon.json').read_text(encoding='utf-8'))
     if full['dictionaryVersion'] != lex['version'] or full['terms'] != lex['terms']:
         raise ValueError('Exported data and dictionary differ')
+    for i, term in enumerate(full['terms']):
+        if term['name'] in {'机器人命令', '签到机器人'} and any(c['docs'][i] for c in full['cells']+full['essenceCells']):
+            raise ValueError('Bot terms remain in filtered statistics')
     if sum(c['messages'] for c in full['cells']) != sum(g['textMessages'] for g in groups):
         raise ValueError('Full-chat message counts do not reconcile')
     seen_cells = set()
@@ -140,6 +164,8 @@ def main():
                 raise ValueError('Co-occurrence diagonals differ from MATLAB topics')
     forbidden = re.compile(r'(?i)https?://|[\w.+-]+@[\w.-]+\.[a-z]{2,}|(?<!\d)\d{5,}(?!\d)|\bu_[\w-]{10,}')
     for sample in details['samples']:
+        if reason(sample['text']):
+            raise ValueError('Bot content remains in anonymous samples')
         if set(sample) != {'id', 'source', 'group', 'month', 'text', 'topics', 'terms'} or forbidden.search(sample['text']):
             raise ValueError('Anonymous sample contains an unexpected field or unredacted identifier')
     full_document = Dependencies()

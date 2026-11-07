@@ -26,14 +26,18 @@
 在网站仓库目录执行：
 
 ```powershell
+python -m pip install numpy scipy pyahocorasick
 node analysis/export-full-lexicon.mjs
 node analysis/test-community-lexicon.mjs
+python analysis/test-bot-filter.py
+python analysis/prepare-bot-filter.py
 python analysis/export-full-chat.py
+python analysis/filter-essence-bots.py
 python analysis/export-essence-chat.py
+python analysis/prepare-features.py
 & 'D:\MatLab\bin\matlab.exe' -batch "addpath('analysis'); analyze_full_chat;"
-python -m pip install pyahocorasick
+python analysis/rebuild-filtered-legacy.py
 python analysis/build-corpus-details.py
-python analysis/pack-essence.py
 python scripts/check_site.py
 ```
 
@@ -45,7 +49,7 @@ MATLAB 可通过 `analyze_full_chat('中间文件目录')` 指定目录。
 
 数据库使用已解码的当前消息正文，不含昵称、@ 提及、引用、卡片和 OCR；
 精华使用 `msgs.tsv` 的 `analysisText`（正文＋OCR，OCR 可能误识别）。
-两源均去除链接、控制字符，重复消息、机器人查询和签到保留。
+两源均去除链接、控制字符；普通重复消息保留，机器人相关消息已过滤。
 月份为北京时间；默认网页仅比较所选群整体有两源文本的月份交集，
 不进行逐群配对，也不默认认为两源是独立随机样本。
 
@@ -117,3 +121,21 @@ HTML 约 50 KB，初始图表数据压缩后约 15 KB；原群消息和话题样
 部署检查会解压并核对内容与原 JSON 一致，OCR 同步脚本自动执行打包。
 
 拆分数据在部署检查中逐群、逐话题与原始 viz-data.json 比较，确保图文档案内容没有丢失。
+
+## 去机器人语料
+
+当前发布版本过滤机器人指令、自动回复/签到模板、明确机器人相关文本，
+并排除高置信自动回复发送者及带有明确机器人标识的账号。规则集中在 `bot_filter.py`。
+正常游戏内命令（如 `/warp`、`/party`）及装备、地牢、组队讨论不因该规则自动排除。
+原始数据库保持不变；过滤前的下载文件与分析输入保存在本地私有
+`D:/Documents/SkyBlockTraining/analysis/full-chat/before-bot-filter/`。
+
+重建流程：`prepare-bot-filter.py` → `export-full-chat.py` →
+`filter-essence-bots.py` → `export-essence-chat.py` → `prepare-features.py` →
+MATLAB `analyze_full_chat` → `rebuild-filtered-legacy.py` → `build-corpus-details.py` →
+`pack-essence.py` → `scripts/check_site.py`。
+首次准备依赖 `numpy`、`scipy`、`pyahocorasick`。
+`prepare-features.py` 缓存稀疏消息/词条匹配；MATLAB 完成消息、词频、话题统计聚合，
+并检查缓存时间与词典版本。档案构建独立重数所有词条验证结果。
+公开覆盖清单包含各源过滤条数及原因计数，不包含机器人账号标识。
+统计、热图、样例、精华下载和旧图文档案均使用过滤后数据。

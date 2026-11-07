@@ -21,6 +21,9 @@ def redact(text):
         return ''
     if re.search(r'(?i)\b(?:uid|uuid)\s*[:：=]|签到成功|签到奖励', text):
         return ''
+    from bot_filter import reason
+    if reason(text):
+        return ''
     text = re.sub(r'https?://\S+|www\.\S+', '[链接]', text)
     text = re.sub(r'[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}', '[邮箱]', text)
     text = re.sub(r'\b(?:\d{1,3}\.){3}\d{1,3}(?::\d+)?\b', '[地址]', text)
@@ -115,21 +118,8 @@ def main():
         out['samples'].extend(unique.values())
         out['sources'][source] = dict(totalText=total, sampleCount=len(unique), cells=[dict(group=g, month=m, pairs=[[i, j, n] for (i, j), n in sorted(counter.items())]) for (g, m), counter in sorted(cooc.items())])
         print(source, 'all', len(patterns), 'terms verified; samples', len(unique), flush=True)
-    db = sqlite3.connect(SOURCE.as_uri()+'?mode=ro', uri=True)
-    tables = {r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
-    hours = []
-    for i, g in enumerate(d['coverage']['groups'], 1):
-        table = 'msg_1_'+g['gid']
-        if table not in tables:
-            continue
-        sql = f"""SELECT strftime('%Y-%m',msgTime,'unixepoch','+8 hours'),
-            CAST(strftime('%w',msgTime,'unixepoch','+8 hours') AS INTEGER),
-            CAST(strftime('%H',msgTime,'unixepoch','+8 hours') AS INTEGER),count(*)
-            FROM "{table}" WHERE chatType=1 AND chatUin=? AND msgTime>0 GROUP BY 1,2,3"""
-        for month, day, hour, n in db.execute(sql, (int(g['gid']),)):
-            if month in months:
-                hours.append([i, months[month], (day+6) % 7, hour, n])
-    out['sources']['chat']['hours'] = hours
+    retained_hours = json.loads((PRIVATE/'retained-hours.json').read_text(encoding='utf-8'))
+    out['sources']['chat']['hours'] = [[g,months[m],day,hour,n] for g,m,day,hour,n in retained_hours if m in months]
     group_ids = {g['gid']: i for i, g in enumerate(d['coverage']['groups'], 1)}
     hours = Counter()
     with (ROOT/'msgs.tsv').open(encoding='utf-8-sig', newline='') as f:

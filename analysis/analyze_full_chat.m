@@ -7,10 +7,39 @@ here = fileparts(mfilename('fullpath'));
 lex = jsondecode(fileread(fullfile(here,'full-chat-lexicon.json')));
 coverage = jsondecode(fileread(fullfile(inputDir,'coverage.json')));
 essence = jsondecode(fileread(fullfile(inputDir,'essence-coverage.json')));
+featurePath=fullfile(inputDir,'features.mat');
+if isfile(featurePath)
+    fmeta=dir(featurePath);
+    for name={'messages.csv','essence.csv'}
+        imeta=dir(fullfile(inputDir,name{1}));
+        assert(fmeta.datenum>=imeta.datenum,'Sparse features are stale; rerun prepare-features.py');
+    end
+    F=load(featurePath);
+    assert(strcmp(F.dictionaryVersion,lex.version),'Feature dictionary mismatch');
+    months=string(F.months(:));
+    ng=numel(coverage.groups); nm=numel(months);
+    nt=numel(lex.terms); nk=numel(lex.topics); nc=ng*nm*2;
+    n=size(F.H,1);
+    sourceCounts=[sum(F.source(:)==1),sum(F.source(:)==2)];
+    ci=sub2ind([ng nm 2],F.group(:),F.month(:),F.source(:));
+    G=sparse(ci,(1:n)',ones(n,1),nc,n);
+    messages=full(sum(G,2));
+    counts=full(G*F.H);
+    docs=full(G*spones(F.H));
+    category=sparse(nt,nk);
+    for j=1:nk
+        category(lex.topics(j).termIndices,j)=1;
+    end
+    topicHits=spones(F.H*category);
+    topics=full(G*topicHits);
+    unmatched=full(G*double(sum(F.H,2)==0));
+    fprintf('MATLAB sparse aggregation: %d messages / %d terms\n',n,nt);
+else
 A = loadMessages(fullfile(inputDir,'messages.csv'));
 B = loadMessages(fullfile(inputDir,'essence.csv'));
 A.source = ones(height(A),1); B.source = 2*ones(height(B),1);
 T = [A; B]; clear A B;
+sourceCounts=[sum(T.source==1),sum(T.source==2)];
 months = unique(T.month);
 ng = numel(coverage.groups); nm = numel(months);
 nt = numel(lex.terms); nk = numel(lex.topics);
@@ -44,6 +73,7 @@ for j = 1:nk
     topics(:,j) = accumarray(ci,double(topicHits(:,j)),[nc 1]);
 end
 unmatched = accumarray(ci,double(~any(topicHits,2)),[nc 1]);
+end
 cells = repmat(struct('group',0,'month',0,'messages',0,'counts',[], ...
     'docs',[],'topics',[],'unmatched',0),nnz(messages),1);
 source = zeros(nnz(messages),1); at = 0;
@@ -66,7 +96,7 @@ fid = fopen(tempPath,'w','n','UTF-8');
 assert(fid~=-1,'Cannot write aggregate JSON');
 fprintf(fid,'%s',jsonencode(out)); fclose(fid);
 movefile(tempPath,publicPath,'f');
-fprintf('Exported %d database + %d essence messages\n',sum(T.source==1),sum(T.source==2));
+fprintf('Exported %d database + %d essence messages\n',sourceCounts(1),sourceCounts(2));
 end
 
 function T = loadMessages(path)

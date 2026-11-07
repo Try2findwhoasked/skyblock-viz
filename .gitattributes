@@ -6,3 +6,6 @@
 *.gif binary
 *.png binary
 *.jpeg binary
+
+# Empty trailing TSV fields are meaningful.
+*.tsv whitespace=-blank-at-eol

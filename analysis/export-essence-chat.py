@@ -20,4 +20,11 @@ with (OUT/'essence.csv').open('w',encoding='utf-8',newline='') as f:
   g['textMessages']+=1
   w.writerow([i,datetime.fromtimestamp(ts,timezone(timedelta(hours=8))).strftime('%Y-%m'),'',text])
 (OUT/'essence-coverage.json').write_text(json.dumps(dict(groups=coverage,total=len(rows),extraction='Essence text + image OCR; existing analysisText; URLs removed',timezone='Asia/Shanghai'),ensure_ascii=False),encoding='utf-8')
+bot_filter=json.loads((OUT/'essence-bot-filter.json').read_text(encoding='utf-8'))
+metadata=json.loads((OUT/'essence-coverage.json').read_text(encoding='utf-8'))
+metadata['botFilter']=bot_filter
+for g,scope in zip(groups,metadata['groups']):
+ scope['botExcluded']=bot_filter['groupRemoved'].get(g['gid'],0)
+ scope['originalTotal']=scope['total']+scope['botExcluded']
+(OUT/'essence-coverage.json').write_text(json.dumps(metadata,ensure_ascii=False),encoding='utf-8')
 print('Essence',len(rows),'analyzable',sum(g['textMessages'] for g in coverage))

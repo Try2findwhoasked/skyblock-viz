@@ -110,6 +110,10 @@ sync-ocr-site.py 中 SITE 为本机网站仓库路径，其他机器请修改。
 数字卡片和话题样例链接可进入相应档案。
 
 旧精华图文档案由 `pack-essence.py` 将内嵌数据移到 `essence-data.json.gz`，
-HTML 约 48 KB，压缩数据约 2.24 MB。浏览器异步解压加载，显示加载状态并暂时禁用控件；
+HTML 约 50 KB，初始图表数据压缩后约 15 KB；原群消息和话题样例分别存入
+`essence-groups/` 与 `essence-topics/`，按选择异步读取，加载失败可重试。
+显示加载状态，初始统计就绪前暂时禁用控件；
 不支持 DecompressionStream 的浏览器回退到原 `viz-data.json`。
 部署检查会解压并核对内容与原 JSON 一致，OCR 同步脚本自动执行打包。
+
+拆分数据在部署检查中逐群、逐话题与原始 viz-data.json 比较，确保图文档案内容没有丢失。

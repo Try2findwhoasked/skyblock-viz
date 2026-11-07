@@ -17,7 +17,7 @@ PUBLISH = ['index.html', 'images', 'report.md', 'msgs.tsv', 'groups.tsv',
            'essence-analysis.html', 'observatory.css', 'observatory.js',
            'analysis/full-chat-lexicon.json', 'word-cloud.js',
            'corpus.html', 'corpus.js', 'corpus.css', 'corpus-details.json',
-           'essence-data.json.gz']
+           'essence-data.json.gz', 'essence-groups', 'essence-topics']
 
 
 class Dependencies(HTMLParser):
@@ -56,6 +56,22 @@ def main():
         data = json.loads(embedded[1].rstrip('\r;'))
     elif 'PACKED_ESSENCE_BOOTSTRAP' in html:
         data = json.loads(gzip.decompress((ROOT / 'essence-data.json.gz').read_bytes()))
+        original = json.loads((ROOT / 'viz-data.json').read_text(encoding='utf-8'))
+        expected = dict(original, groupSamples={}, imageMap={}, groupSampleFiles={}, samples={}, samplesOther=[], sampleFiles={}, sampleCounts={})
+        for tid, rows in dict(original.get('samples', {}), other=original.get('samplesOther', [])).items():
+            name = 'essence-topics/' + tid + '.json.gz'
+            expected['sampleFiles'][tid] = name
+            expected['sampleCounts'][tid] = len(rows)
+            if json.loads(gzip.decompress((ROOT / name).read_bytes())) != rows:
+                raise ValueError('Lazy essence topic data differs from original')
+        for gid, rows in original.get('groupSamples', {}).items():
+            name = 'essence-groups/' + gid + '.json.gz'
+            expected['groupSampleFiles'][gid] = name
+            if json.loads(gzip.decompress((ROOT / name).read_bytes())) != rows:
+                raise ValueError('Lazy essence group data differs from original')
+        if data != expected:
+            raise ValueError('Packed essence overview differs from original')
+        data = original
     else:
         raise ValueError('Legacy page data loader is missing')
     if data != json.loads((ROOT / 'viz-data.json').read_text(encoding='utf-8')):

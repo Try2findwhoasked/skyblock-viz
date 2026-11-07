@@ -828,8 +828,32 @@ window.__SB_APP_4 = function () {
     if (tid === 'other') return D.samplesOther || []
     return (D.samples && D.samples[tid]) || []
   }
+  /* LAZY_ESSENCE_TOPICS */
+  var topicLoadToken = 0
   function renderTopic(tid) {
     if (!BOX) return
+    var token = ++topicLoadToken
+    if (D.sampleFiles && D.sampleFiles[tid] &&
+        !Object.prototype.hasOwnProperty.call(D.samples, tid)) {
+      BOX.innerHTML = '<div class="empty">正在读取该话题消息样例…</div>'
+      fetch(D.sampleFiles[tid]).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status)
+        return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).json()
+      }).then(function (rows) {
+        D.samples[tid] = rows
+        if (tid === 'other') D.samplesOther = rows
+        if (token === topicLoadToken) renderTopic(tid)
+      }).catch(function (e) {
+        if (token !== topicLoadToken) return
+        BOX.innerHTML = '<div class="empty">话题样例读取失败：' + esc(e.message) + '</div>'
+        var retry = document.createElement('button')
+        retry.className = 'more'
+        retry.textContent = '重新加载样例'
+        retry.addEventListener('click', function () { renderTopic(tid) })
+        BOX.appendChild(retry)
+      })
+      return
+    }
     var arr = listOf(tid)
     if (!arr.length) {
       BOX.innerHTML = '<div class="empty">该话题暂无可用样例</div>'
@@ -847,10 +871,10 @@ window.__SB_APP_4 = function () {
       var it = order[i]
       h += '<span class="tchip' + (it.id === curTopic ? ' on' : '') + '" data-tid="' + esc(it.id) + '">' +
         '<i style="background:' + esc(it.color) + '"></i>' + esc(it.name) +
-        '<em>' + listOf(it.id).length + '</em></span>'
+        '<em>' + (D.sampleCounts ? D.sampleCounts[it.id] || 0 : listOf(it.id).length) + '</em></span>'
     }
     h += '<span class="tchip' + (curTopic === 'other' ? ' on' : '') + '" data-tid="other">' +
-      '<i style="background:#8b949e"></i>其他 / 未归类<em>' + listOf('other').length + '</em></span>'
+      '<i style="background:#8b949e"></i>其他 / 未归类<em>' + (D.sampleCounts ? D.sampleCounts.other || 0 : listOf('other').length) + '</em></span>'
     CHIPS.innerHTML = h
   }
   if (CHIPS) {
@@ -874,8 +898,31 @@ window.__SB_APP_4 = function () {
   var G_PAGE = 30           // 首次渲染条数
   var gState = { gid: null, shown: 0 }
 
+  /* LAZY_ESSENCE_GROUPS */
+  var groupLoadToken = 0
   function renderGroup(gid, keepScroll) {
     if (!GBOX) return
+    var loadToken = ++groupLoadToken
+    if (D.groupSampleFiles && D.groupSampleFiles[gid] &&
+        !Object.prototype.hasOwnProperty.call(D.groupSamples, gid)) {
+      GBOX.innerHTML = '<div class="empty">正在读取该群精华消息…</div>'
+      fetch(D.groupSampleFiles[gid]).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status)
+        return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).json()
+      }).then(function (rows) {
+        D.groupSamples[gid] = rows
+        if (loadToken === groupLoadToken) renderGroup(gid, keepScroll)
+      }).catch(function (e) {
+        if (loadToken !== groupLoadToken) return
+        GBOX.innerHTML = '<div class="empty">该群消息读取失败：' + esc(e.message) + '</div>'
+        var retry = document.createElement('button')
+        retry.className = 'more'
+        retry.textContent = '重新加载该群'
+        retry.addEventListener('click', function () { renderGroup(gid, keepScroll) })
+        GBOX.appendChild(retry)
+      })
+      return
+    }
     var g = null
     var gs = D.groups || []
     for (var i = 0; i < gs.length; i++) {
